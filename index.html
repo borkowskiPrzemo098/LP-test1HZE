@@ -70,7 +70,7 @@
   /* Header */
   header.site{
     background:var(--cream); border-bottom:1px solid var(--line);
-    padding:18px 0;
+    padding:14px 0;
   }
   header.site .wrap{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap;}
   .logo{font-size:22px; font-weight:800; letter-spacing:1px; display:flex; align-items:center; gap:10px;}
@@ -78,6 +78,12 @@
   .logo span{color:var(--gold-dark);}
   .contact-line{font-family:'Work Sans', sans-serif; font-size:13px; text-align:right; color:#555;}
   .contact-line b{color:var(--ink);}
+  @media(max-width:560px){
+    header.site{padding:12px 0;}
+    .contact-line{display:none;}
+    .logo{font-size:19px;}
+    .logo img{width:28px; height:28px;}
+  }
 
   /* Hero */
   .hero{
@@ -189,11 +195,14 @@
     margin:0; border-radius:10px; overflow:hidden; border:1px solid var(--line);
     box-shadow:0 10px 22px rgba(0,0,0,.10); background:#000;
   }
-  .coin-gallery img{
-    width:100%; aspect-ratio:1/1; object-fit:cover; display:block;
+  .coin-gallery .bar-photo{
+    width:100%; aspect-ratio:1/1;
+    background-image:url("images/baner-hze-nowa-test2.png");
+    background-repeat:no-repeat;
+    background-size:340%;
     transition:transform .4s ease;
   }
-  .coin-gallery figure:hover img{ transform:scale(1.08); }
+  .coin-gallery figure:hover .bar-photo{ transform:scale(1.1); }
   .coin-gallery figcaption{
     font-family:'Work Sans', sans-serif; font-size:12px; font-weight:700; letter-spacing:.3px;
     text-align:center; padding:10px 8px; background:#fff; color:#4a4636;
@@ -242,8 +251,14 @@
     position:sticky; bottom:0; z-index:50; background:#fff; border-top:1px solid var(--line);
     box-shadow:0 -6px 18px rgba(0,0,0,.08);
   }
-  .sticky-bar .wrap{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 20px; flex-wrap:wrap;}
-  .sticky-bar .price{font-family:'Work Sans', sans-serif; font-weight:800; color:var(--gold-dark); font-size:15px;}
+  .sticky-bar .wrap{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 20px; flex-wrap:nowrap;}
+  .sticky-bar .price{font-family:'Work Sans', sans-serif; font-weight:800; color:var(--gold-dark); font-size:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  @media(max-width:560px){
+    .sticky-bar .wrap{padding:10px 14px; gap:10px;}
+    .sticky-bar .price{font-size:12px;}
+    .sticky-bar .price .full-label{display:none;}
+    .sticky-bar .btn-sm{padding:9px 16px; font-size:12px; flex-shrink:0;}
+  }
 
   footer{background:var(--ink); color:#a4967a; padding:40px 0 24px; font-family:'Work Sans', sans-serif; font-size:13px;}
   footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px;}
@@ -265,14 +280,14 @@
     background-size:cover;
     background-position:center 30%;
     background-attachment:fixed;
-    padding:64px 0 50px;
+    padding:34px 0 40px;
     text-align:center;
   }
-  @media (max-width:900px){ .promo-banner{ background-attachment:scroll; } }
+  @media (max-width:900px){ .promo-banner{ background-attachment:scroll; padding:18px 0 30px; } }
   .promo-hero-grid{
-    display:grid; grid-template-columns:1.05fr .95fr; gap:44px; align-items:center;
+    display:grid; grid-template-columns:1.05fr .95fr; gap:44px; align-items:start;
   }
-  @media (max-width:900px){ .promo-hero-grid{ grid-template-columns:1fr; } }
+  @media (max-width:900px){ .promo-hero-grid{ grid-template-columns:1fr; gap:24px; } }
   .order-form-compact{ margin:0; max-width:none; padding:30px; box-shadow:0 20px 44px rgba(0,0,0,.14); }
 
   /* ===== Parallax (fixed background) sections ===== */
@@ -314,8 +329,14 @@
   }
   .order-form .full{grid-column:1/-1;}
   .order-summary{
-    display:flex; justify-content:space-between; align-items:center; background:var(--cream-2);
-    border-radius:8px; padding:14px 18px; margin:20px 0; font-family:'Work Sans', sans-serif; font-size:14px;
+    background:var(--cream-2);
+    border-radius:8px; padding:16px 18px; margin:20px 0; font-family:'Work Sans', sans-serif; font-size:13.5px;
+  }
+  .order-summary .line{display:flex; justify-content:space-between; padding:4px 0; color:#4a4636;}
+  .order-summary .line .free{color:var(--green); font-weight:700;}
+  .order-summary .total{
+    display:flex; justify-content:space-between; align-items:center;
+    border-top:1px solid var(--line); margin-top:8px; padding-top:10px; font-size:14px;
   }
   .order-summary b{color:var(--gold-dark); font-size:18px;}
   .order-form .btn{width:100%; text-align:center; border:none; cursor:pointer;}
@@ -416,8 +437,12 @@
           </div>
         </div>
         <div class="order-summary">
-          <span>Razem do zapłaty (+ 14,99 zł wysyłka)</span>
-          <b>273,99 zł</b>
+          <div class="line"><span>Moneta „Historia Złotych Euro”</span><span>259,00 zł</span></div>
+          <div class="line"><span>Dostawa</span><span>14,99 zł</span></div>
+          <div class="line"><span>Szkatuła kolekcjonerska</span><span class="free">Gratis</span></div>
+          <div class="line"><span>Certyfikat autentyczności</span><span class="free">Gratis</span></div>
+          <div class="line"><span>Ubezpieczenie przesyłki</span><span class="free">Gratis</span></div>
+          <div class="total"><span>Razem do zapłaty</span><b>273,99 zł</b></div>
         </div>
         <button type="submit" class="btn">Wyślij zamówienie</button>
         <div class="order-note">To formularz demonstracyjny — zamówienia nie są rejestrowane ani przekazywane do realizacji.</div>
@@ -486,20 +511,20 @@
     </div>
     <div class="coin-gallery">
       <figure>
-        <img src="images/baner-hze-nowa-test2.png" style="object-position:center 20%;" alt="Zbliżenie: awers i rewers monety Watykan 2002">
-        <figcaption>Watykan · 2002</figcaption>
+        <div class="bar-photo" style="background-position:78% 18%;"></div>
+        <figcaption>Holandia</figcaption>
       </figure>
       <figure>
-        <img src="images/baner-hze-nowa-test2.png" style="object-position:center 8%;" alt="Zbliżenie: złota sztaba kolekcji Historia Złotych Euro">
-        <figcaption>Sztaba kolekcjonerska</figcaption>
+        <div class="bar-photo" style="background-position:85% 22%;"></div>
+        <figcaption>Hiszpania</figcaption>
       </figure>
       <figure>
-        <img src="images/baner-hze-nowa-test2.png" style="object-position:80% 18%;" alt="Zbliżenie: rewers monety z mapą Europy">
-        <figcaption>Rewers · mapa Europy</figcaption>
+        <div class="bar-photo" style="background-position:80% 26%;"></div>
+        <figcaption>Włochy</figcaption>
       </figure>
       <figure>
-        <img src="images/baner-hze-nowa-test2.png" style="object-position:center 78%;" alt="Zbliżenie: certyfikat autentyczności i szkatuła kolekcjonerska">
-        <figcaption>Certyfikat i szkatuła</figcaption>
+        <div class="bar-photo" style="background-position:88% 15%;"></div>
+        <figcaption>Niemcy</figcaption>
       </figure>
     </div>
     <div class="badge-note" style="margin-top:22px;">Zdjęcia poglądowe. Kolejne monety kolekcji wysyłane są w odstępach miesięcznych w cenie 329 zł/szt. Kolekcję możesz przerwać w dowolnym momencie — bez zobowiązań.</div>
@@ -606,7 +631,7 @@
 </section>
 <div class="sticky-bar">
   <div class="wrap">
-    <div class="price">Historia Złotych Euro — <span style="color:var(--ink)">259 zł</span> <span style="text-decoration:line-through;color:#a4967a;font-weight:400;">329 zł</span></div>
+    <div class="price"><span class="full-label">Historia Złotych Euro — </span><span style="color:var(--ink)">259 zł</span> <span style="text-decoration:line-through;color:#a4967a;font-weight:400;">329 zł</span></div>
     <a href="#formularz" class="btn btn-sm">Zamawiam</a>
   </div>
 </div>
