@@ -43,11 +43,11 @@
     border-radius:6px;
     text-decoration:none;
     font-size:15px;
-    box-shadow:0 8px 20px rgba(184,134,47,.35);
+    box-shadow:0 3px 8px rgba(20,16,6,.22);
     border:1px solid var(--gold-dark);
     transition:transform .15s ease, box-shadow .15s ease;
   }
-  .btn:hover{transform:translateY(-2px); box-shadow:0 12px 26px rgba(184,134,47,.45);}
+  .btn:hover{transform:translateY(-2px); box-shadow:0 6px 14px rgba(20,16,6,.28);}
   .btn-sm{padding:11px 24px; font-size:13px;}
   .eyebrow{
     font-family:'Work Sans', sans-serif;
@@ -240,6 +240,134 @@
     background:#fff8e6; border:1px solid var(--line); color:#6b5b21; font-family:'Work Sans', sans-serif;
     font-size:12.5px; padding:10px 16px; border-radius:8px; text-align:center; margin-top:16px;
   }
+
+  /* ===== Promo banner (hero replacement) ===== */
+  .promo-banner{
+    background:#fdfbf5;
+    padding:56px 0 42px;
+    text-align:center;
+  }
+  .promo-title h1{
+    font-size:clamp(38px,7vw,64px); color:#152244; letter-spacing:2px; line-height:1;
+  }
+  .promo-title .promo-sub{
+    font-family:'Bitter',serif; font-style:italic; font-weight:600;
+    color:var(--gold-dark); font-size:clamp(16px,2.4vw,22px); letter-spacing:1px; margin-top:8px;
+  }
+  .promo-line{width:120px;height:1px;background:var(--gold);margin:18px auto;position:relative;}
+  .promo-line::after{content:"●"; position:absolute; left:50%; top:-7px; transform:translateX(-50%); color:var(--gold); font-size:10px;}
+  .promo-tag{
+    font-family:'Work Sans', sans-serif; font-weight:700; letter-spacing:1.5px; font-size:14px; color:#152244;
+  }
+
+  .promo-coin-wrap{
+    position:relative; max-width:520px; margin:44px auto 40px; height:170px;
+  }
+  .promo-bar{
+    position:absolute; top:20px; left:0; width:100%; height:120px; border-radius:8px;
+    background:linear-gradient(155deg,#fff3c4,#e8c976 25%,#b8862f 60%,#7a5a1c 100%);
+    border:2px solid #7a5a1c;
+    box-shadow:0 18px 36px rgba(120,90,20,.35), inset 0 2px 6px rgba(255,255,255,.6);
+  }
+  .promo-coin{
+    position:absolute; top:0; left:50%; transform:translateX(-50%);
+    width:170px;height:170px;border-radius:50%;
+    background:radial-gradient(circle at 32% 28%, #fff6d6, #e8c976 30%, #b8862f 62%, #6f5117 100%);
+    border:5px solid #7a5a1c;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 12px 26px rgba(0,0,0,.25), inset 0 4px 10px rgba(255,255,255,.55), inset 0 -8px 14px rgba(0,0,0,.3);
+  }
+  .promo-coin span{
+    font-family:'Work Sans', sans-serif; font-size:9.5px; font-weight:800; letter-spacing:1px;
+    color:#5e460f; text-transform:uppercase; line-height:1.5;
+  }
+
+  .promo-badges{display:flex; justify-content:center; gap:38px; flex-wrap:wrap; margin-bottom:38px;}
+  .promo-badges .badge{width:150px; font-family:'Work Sans', sans-serif;}
+  .promo-badges .badge-ic{
+    width:52px;height:52px;border-radius:50%;margin:0 auto 10px;
+    border:2px solid var(--gold); display:flex;align-items:center;justify-content:center;
+    color:var(--gold-dark); font-weight:800; font-size:13px;
+  }
+  .promo-badges .badge div:last-child{font-size:12px; font-weight:700; color:#152244; letter-spacing:.3px;}
+
+  .promo-price-bar{
+    display:flex; max-width:640px; margin:0 auto 34px; border-radius:8px; overflow:hidden;
+    box-shadow:0 14px 30px rgba(0,0,0,.18); font-family:'Work Sans', sans-serif;
+  }
+  .ppb-left, .ppb-right{flex:1; padding:22px 20px; text-align:left;}
+  .ppb-left{background:#6b1f2a; color:#f0d9a8; clip-path:polygon(0 0,100% 0,88% 100%,0% 100%);}
+  .ppb-right{background:#132242; color:#f0d9a8; display:flex; align-items:center; gap:14px; margin-left:-30px; padding-left:50px; clip-path:polygon(12% 0,100% 0,100% 100%,0 100%);}
+  .ppb-label{font-size:11px; letter-spacing:1.5px; color:var(--gold-light); margin-bottom:4px;}
+  .ppb-price{font-size:26px; font-weight:800; color:#fff;}
+  .ppb-price span{font-size:14px; font-weight:400; text-decoration:line-through; color:#c9a6a6; margin-left:8px;}
+  .ppb-cart{font-size:22px;}
+  .ppb-right small{font-weight:400; font-size:10.5px; letter-spacing:.5px; color:#a9b6d6;}
+  .ppb-right > div:last-child{font-size:12.5px; font-weight:800; letter-spacing:.5px;}
+
+  .promo-extras{display:flex; justify-content:center; align-items:center; gap:18px; flex-wrap:wrap;}
+  .extra-ph{
+    width:130px; height:120px; border-radius:8px; border:1px solid var(--line);
+    background:linear-gradient(135deg,#f5eed8,#e6d7ad);
+    display:flex;align-items:center;justify-content:center; text-align:center;
+    font-family:'Work Sans', sans-serif; font-size:11px; color:#7a6733; padding:8px;
+  }
+  .extras-badge{
+    background:#132242; color:var(--gold-light); font-family:'Work Sans', sans-serif;
+    font-size:12px; font-weight:800; letter-spacing:1px; padding:12px 20px; border-radius:6px; border:1px solid var(--gold-dark);
+  }
+
+  /* ===== Parallax (fixed background) sections ===== */
+  .parallax{
+    position:relative;
+    color:#f4ecd8;
+    background-color:#1b1a17;
+    background-image:
+      linear-gradient(rgba(20,18,12,.72),rgba(20,18,12,.82)),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='900' height='500' viewBox='0 0 900 500'><rect width='900' height='500' fill='%23e9dfc4'/><g fill='%23c9b98c'><rect x='0' y='120' width='900' height='14'/><rect x='0' y='430' width='900' height='16'/>%3C!--columns--%3E<rect x='20' y='120' width='22' height='310'/><rect x='80' y='120' width='22' height='310'/><rect x='140' y='120' width='22' height='310'/><rect x='200' y='120' width='22' height='310'/><rect x='260' y='120' width='22' height='310'/><rect x='320' y='120' width='22' height='310'/><rect x='380' y='120' width='22' height='310'/><rect x='440' y='120' width='22' height='310'/><rect x='500' y='120' width='22' height='310'/><rect x='560' y='120' width='22' height='310'/><rect x='620' y='120' width='22' height='310'/><rect x='680' y='120' width='22' height='310'/><rect x='740' y='120' width='22' height='310'/><rect x='800' y='120' width='22' height='310'/><rect x='860' y='120' width='22' height='310'/></g><g fill='%23d8cba0' opacity='.6'><path d='M400 40 L500 40 L500 120 L400 120 Z'/><rect x='420' y='0' width='60' height='40'/></g></svg>");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+  }
+  @media (max-width:900px){ .parallax{ background-attachment:scroll; } }
+  .parallax .section-head p{color:#cbbd93;}
+  .parallax .section-head .eyebrow{color:var(--gold-light);}
+  .parallax h2{color:#fff;}
+  .parallax .feature{background:rgba(27,26,23,.55); border-color:#4a3c1e;}
+  .parallax .feature h4{color:#f4ecd8;}
+  .parallax .feature p{color:#cbbd93;}
+  .parallax .feature .ic{color:#241b06;}
+
+  /* ===== Order form ===== */
+  .order-form{
+    background:#fff; border:1px solid var(--line); border-radius:14px; padding:38px; max-width:640px; margin:0 auto;
+  }
+  .order-form .row{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;}
+  @media(max-width:560px){.order-form .row{grid-template-columns:1fr;}}
+  .order-form label{
+    display:block; font-family:'Work Sans', sans-serif; font-size:12.5px; font-weight:700; color:#4a4636; margin-bottom:6px;
+  }
+  .order-form input, .order-form select, .order-form textarea{
+    width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:8px;
+    font-family:'Work Sans', sans-serif; font-size:14px; background:var(--cream); color:var(--ink);
+  }
+  .order-form input:focus, .order-form select:focus, .order-form textarea:focus{
+    outline:2px solid var(--gold-light); outline-offset:1px;
+  }
+  .order-form .full{grid-column:1/-1;}
+  .order-summary{
+    display:flex; justify-content:space-between; align-items:center; background:var(--cream-2);
+    border-radius:8px; padding:14px 18px; margin:20px 0; font-family:'Work Sans', sans-serif; font-size:14px;
+  }
+  .order-summary b{color:var(--gold-dark); font-size:18px;}
+  .order-form .btn{width:100%; text-align:center; border:none; cursor:pointer;}
+  .order-note{font-family:'Work Sans', sans-serif; font-size:12px; color:#8a8570; text-align:center; margin-top:14px;}
+  .avatar-ph{
+    width:44px;height:44px;border-radius:50%;margin-bottom:12px;
+    background:linear-gradient(160deg,#e6d7ad,#c9b672);
+    display:flex;align-items:center;justify-content:center;font-size:18px;
+    border:1px solid var(--line);
+  }
 </style>
 </head>
 <body>
@@ -256,29 +384,58 @@
   </div>
 </header>
 
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="eyebrow">Kolekcja „Historia Złotych Euro” · Watykan, 2002</div>
-      <h1>Pierwsza złota moneta Euro świata<br><em>z wizerunkiem Jana Pawła II</em></h1>
-      <p class="lead">Oficjalna, kolekcjonerska moneta wybita z czystego złota próby 9999, będąca prawnym środkiem płatniczym Watykanu. Dołącz do limitowanej kolekcji zaledwie 7 500 egzemplarzy na świecie.</p>
-      <a href="#zamow" class="btn">Chcę zamówić monetę</a>
-      <div class="trust-row">
-        <div><span class="dot"></span> Certyfikat autentyczności</div>
-        <div><span class="dot"></span> Złoto próby 9999</div>
-        <div><span class="dot"></span> 14 dni na zwrot</div>
-        <div><span class="dot"></span> Mennica niemiecka</div>
+<section class="promo-banner">
+  <div class="wrap">
+    <div class="promo-title">
+      <h1>WATYKAN</h1>
+      <div class="promo-sub">Pierwsza złota moneta Euro</div>
+      <div class="promo-line"></div>
+      <div class="promo-tag">Limitowana kolekcja Historia Złotych Euro</div>
+    </div>
+
+    <div class="promo-coin-wrap">
+      <div class="promo-bar"></div>
+      <div class="promo-coin"><span>FIRST GOLD-EURO<br>VATICAN · 2002</span></div>
+    </div>
+
+    <div class="promo-badges">
+      <div class="badge">
+        <div class="badge-ic">.9999</div>
+        <div>CZYSTE ZŁOTO<br>.9999</div>
+      </div>
+      <div class="badge">
+        <div class="badge-ic">✝</div>
+        <div>JAN PAWEŁ II NA<br>UNIKALNEJ MONECIE</div>
+      </div>
+      <div class="badge">
+        <div class="badge-ic">◆</div>
+        <div>LIMITOWANA<br>KOLEKCJA</div>
       </div>
     </div>
-    <div class="coin-card">
-      <div class="coin-visual"><span>JAN PAWEŁ II<br>100 FRANKÓW CFA<br>WATYKAN · 2002</span></div>
-      <div class="price-block">
-        <div class="price-old">329 zł</div>
-        <div class="price-new">259 zł</div>
-        <div class="price-save">Oszczędzasz 70 zł</div><br>
-        <a href="#zamow" class="btn btn-sm">Tak, zamawiam</a>
-        <div class="micro">+ 14,99 zł wysyłka · płatność przy realizacji zamówienia</div>
+
+    <div class="promo-price-bar">
+      <div class="ppb-left">
+        <div class="ppb-label">CENA SPECJALNA</div>
+        <div class="ppb-price">259 ZŁ <span>329 ZŁ</span></div>
       </div>
+      <div class="ppb-right">
+        <div class="ppb-cart">🛒</div>
+        <div>ZAMÓW TERAZ<br><small>LICZBA SZTUK OGRANICZONA</small></div>
+      </div>
+    </div>
+    <a href="#zamow" class="btn">Chcę zamówić monetę</a>
+
+    <div class="promo-extras" style="margin-top:34px;">
+      <div class="extra-ph">Zdjęcie: certyfikat autentyczności</div>
+      <div class="extra-ph">Zdjęcie: szkatuła kolekcjonerska</div>
+      <div class="extras-badge">+ AKCESORIA GRATIS</div>
+    </div>
+
+    <div class="trust-row" style="justify-content:center; color:#7a7460; margin-top:30px;">
+      <div><span class="dot"></span> Certyfikat autentyczności</div>
+      <div><span class="dot"></span> Złoto próby 9999</div>
+      <div><span class="dot"></span> 14 dni na zwrot</div>
+      <div><span class="dot"></span> Mennica niemiecka</div>
     </div>
   </div>
 </section>
@@ -303,7 +460,7 @@
   </div>
 </section>
 
-<section class="alt">
+<section class="parallax">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Dlaczego warto</div>
@@ -373,7 +530,7 @@
   </div>
 </section>
 
-<section>
+<section class="parallax">
   <div class="wrap">
     <div class="guarantee">
       <h3>🛡️ Gwarancja spokojnego zakupu — 14 dni</h3>
@@ -391,16 +548,19 @@
     </div>
     <div class="testi-grid">
       <div class="testi">
+        <div class="avatar-ph">👤</div>
         <div class="stars">★★★★★</div>
         <p>„Moneta zrobiła na mnie ogromne wrażenie — wykonanie i detale są naprawdę na najwyższym poziomie. Szkatuła prezentuje się elegancko.”</p>
         <div class="who">— Przykładowa opinia klienta</div>
       </div>
       <div class="testi">
+        <div class="avatar-ph">👤</div>
         <div class="stars">★★★★★</div>
         <p>„Zamówienie przyszło szybko, wraz z certyfikatem. Idealny pomysł na prezent rodzinny o wyjątkowym znaczeniu.”</p>
         <div class="who">— Przykładowa opinia klienta</div>
       </div>
       <div class="testi">
+        <div class="avatar-ph">👤</div>
         <div class="stars">★★★★★</div>
         <p>„Jako kolekcjoner numizmatów doceniam jakość wykonania i rzetelny opis. Czekam na kolejne monety z serii.”</p>
         <div class="who">— Przykładowa opinia klienta</div>
@@ -450,10 +610,70 @@
   </div>
 </section>
 
+<section class="alt" id="formularz">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Formularz testowy</div>
+      <h2>Zamów monetę „Historia Złotych Euro”</h2>
+      <p>Wypełnij dane, aby zarezerwować egzemplarz. To wersja demonstracyjna formularza — bez podłączonej bramki płatności.</p>
+    </div>
+    <form class="order-form" onsubmit="event.preventDefault(); alert('To wersja demonstracyjna szablonu — zamówienia nie są jeszcze obsługiwane.');">
+      <div class="row">
+        <div>
+          <label for="imie">Imię i nazwisko</label>
+          <input id="imie" type="text" placeholder="Jan Kowalski" required>
+        </div>
+        <div>
+          <label for="tel">Telefon</label>
+          <input id="tel" type="tel" placeholder="+48 600 000 000" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="full">
+          <label for="email">Adres e-mail</label>
+          <input id="email" type="email" placeholder="jan.kowalski@przyklad.pl" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="full">
+          <label for="adres">Adres dostawy</label>
+          <input id="adres" type="text" placeholder="Ulica, numer domu/mieszkania">
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label for="miasto">Miasto</label>
+          <input id="miasto" type="text" placeholder="Warszawa">
+        </div>
+        <div>
+          <label for="kod">Kod pocztowy</label>
+          <input id="kod" type="text" placeholder="00-000">
+        </div>
+      </div>
+      <div class="row">
+        <div class="full">
+          <label for="ilosc">Liczba egzemplarzy</label>
+          <select id="ilosc">
+            <option>1 moneta — 259 zł</option>
+            <option>2 monety — 518 zł</option>
+            <option>3 monety — 777 zł</option>
+          </select>
+        </div>
+      </div>
+      <div class="order-summary">
+        <span>Razem do zapłaty (+ 14,99 zł wysyłka)</span>
+        <b>273,99 zł</b>
+      </div>
+      <button type="submit" class="btn">Wyślij zamówienie</button>
+      <div class="order-note">To formularz demonstracyjny — zamówienia nie są rejestrowane ani przekazywane do realizacji.</div>
+    </form>
+  </div>
+</section>
+
 <div class="sticky-bar">
   <div class="wrap">
     <div class="price">Historia Złotych Euro — <span style="color:var(--ink)">259 zł</span> <span style="text-decoration:line-through;color:#a4967a;font-weight:400;">329 zł</span></div>
-    <a href="#zamow" class="btn btn-sm">Zamawiam</a>
+    <a href="#formularz" class="btn btn-sm">Zamawiam</a>
   </div>
 </div>
 

@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "dark-glow",
+        "value": "rgba(120,90,20,.35)",
+        "createdAt": "2026-08-14T12:17:08.724Z",
+        "reason": "intentional gold-bar sheen on light hero background, not a chromatic AI glow"
+      }
+    ]
+  }
+}
