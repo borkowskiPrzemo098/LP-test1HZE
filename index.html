@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Historia Złotych Euro | Jan Paweł II – Watykańska Moneta Kolekcjonerska</title>
+<meta name="description" content="Wyjątkowa złota moneta upamiętniająca Jana Pawła II – pierwsze złote Euro Watykanu. Limitowana kolekcja, certyfikat autentyczności, gwarancja 14 dni.">
+<style>
+  :root{
+    --gold:#b8862f;
+    --gold-light:#e8c976;
+    --gold-dark:#8a6321;
+    --ink:#1b1a17;
+    --cream:#faf6ee;
+    --cream-2:#f2ead9;
+    --line:#e3d6b8;
+    --green:#2f6b4f;
+    --maxw:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Georgia',"Iowan Old Style",serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+  }
+  h1,h2,h3,h4{font-family:'Georgia',serif; font-weight:700; letter-spacing:.2px;}
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px;}
+  .btn{
+    display:inline-block;
+    background:linear-gradient(180deg,var(--gold-light),var(--gold));
+    color:#241b06;
+    font-family:Arial, sans-serif;
+    font-weight:800;
+    letter-spacing:.5px;
+    text-transform:uppercase;
+    padding:16px 38px;
+    border-radius:6px;
+    text-decoration:none;
+    font-size:15px;
+    box-shadow:0 8px 20px rgba(184,134,47,.35);
+    border:1px solid var(--gold-dark);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px); box-shadow:0 12px 26px rgba(184,134,47,.45);}
+  .btn-sm{padding:11px 24px; font-size:13px;}
+  .eyebrow{
+    font-family:Arial, sans-serif;
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--gold-dark);
+    font-weight:700;
+  }
+
+  /* Top bar */
+  .topbar{
+    background:var(--ink); color:#e9dfc4;
+    font-family:Arial, sans-serif; font-size:13px;
+    padding:8px 0; text-align:center;
+  }
+  .topbar b{color:var(--gold-light);}
+
+  /* Header */
+  header.site{
+    background:var(--cream); border-bottom:1px solid var(--line);
+    padding:18px 0;
+  }
+  header.site .wrap{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap;}
+  .logo{font-size:22px; font-weight:800; letter-spacing:1px;}
+  .logo span{color:var(--gold-dark);}
+  .contact-line{font-family:Arial, sans-serif; font-size:13px; text-align:right; color:#555;}
+  .contact-line b{color:var(--ink);}
+
+  /* Hero */
+  .hero{
+    position:relative;
+    background:radial-gradient(1200px 500px at 80% -10%, #2a2213 0%, var(--ink) 55%), var(--ink);
+    color:#f4ecd8;
+    padding:64px 0 70px;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      radial-gradient(circle at 15% 30%, rgba(232,201,118,.10), transparent 40%),
+      radial-gradient(circle at 85% 70%, rgba(232,201,118,.08), transparent 45%);
+    pointer-events:none;
+  }
+  .hero-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:48px; align-items:center; position:relative;}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;}}
+  .hero h1{font-size:clamp(28px,4vw,44px); line-height:1.15; margin:14px 0 18px; color:#fff;}
+  .hero h1 em{font-style:normal; color:var(--gold-light);}
+  .hero p.lead{font-size:17px; color:#d8cba6; max-width:52ch; margin-bottom:26px;}
+  .trust-row{display:flex; gap:22px; flex-wrap:wrap; margin-top:28px; font-family:Arial,sans-serif; font-size:13px; color:#cbbd93;}
+  .trust-row div{display:flex; align-items:center; gap:8px;}
+  .trust-row .dot{width:8px;height:8px;border-radius:50%;background:var(--gold-light);}
+
+  .coin-card{
+    background:linear-gradient(160deg,#2a2213,#1b1a17);
+    border:1px solid #4a3c1e;
+    border-radius:14px;
+    padding:26px;
+    text-align:center;
+    box-shadow:0 30px 60px rgba(0,0,0,.45);
+  }
+  .coin-visual{
+    width:180px;height:180px;border-radius:50%;margin:0 auto 18px;
+    background:
+      radial-gradient(circle at 32% 28%, #fff6d6, #e8c976 30%, #b8862f 62%, #6f5117 100%);
+    border:6px solid #4a3c1e;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 0 0 2px rgba(232,201,118,.25), inset 0 4px 12px rgba(255,255,255,.5), inset 0 -8px 16px rgba(0,0,0,.35);
+    position:relative;
+  }
+  .coin-visual span{
+    font-family:Arial, sans-serif;
+    font-size:10px; font-weight:800; letter-spacing:1.5px;
+    color:#5e460f; text-transform:uppercase; line-height:1.4;
+  }
+  .price-block{font-family:Arial, sans-serif; color:#f4ecd8;}
+  .price-old{color:#a4967a; text-decoration:line-through; font-size:14px;}
+  .price-new{font-size:34px; font-weight:800; color:var(--gold-light); margin:2px 0 4px;}
+  .price-save{
+    display:inline-block; background:var(--green); color:#fff; font-size:12px; font-weight:700;
+    padding:3px 10px; border-radius:20px; margin-bottom:14px;
+  }
+  .coin-card .btn{width:100%; text-align:center; margin-top:6px;}
+  .micro{font-size:11px; color:#a4967a; margin-top:10px;}
+
+  /* Section basics */
+  section{padding:64px 0;}
+  .section-head{text-align:center; max-width:700px; margin:0 auto 40px;}
+  .section-head h2{font-size:clamp(24px,3vw,32px); margin:10px 0 14px;}
+  .section-head p{color:#5a5648; font-size:16px;}
+  .alt{background:var(--cream-2);}
+
+  /* Story */
+  .story-grid{display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center;}
+  @media(max-width:850px){.story-grid{grid-template-columns:1fr;}}
+  .story-grid .ph{
+    aspect-ratio:4/3; border-radius:12px;
+    background:linear-gradient(135deg,#efe3c2,#d9c48f);
+    display:flex;align-items:center;justify-content:center;
+    font-family:Arial,sans-serif; color:#7a6733; font-size:13px; letter-spacing:1px;
+    border:1px solid var(--line);
+  }
+  .story-grid h3{font-size:23px; margin-bottom:14px;}
+  .story-grid p{color:#403d33; margin-bottom:14px;}
+  blockquote{
+    border-left:3px solid var(--gold); padding-left:16px; margin:18px 0;
+    font-style:italic; color:#5a4f2c;
+  }
+
+  /* Feature cards */
+  .features{display:grid; grid-template-columns:repeat(4,1fr); gap:22px;}
+  @media(max-width:900px){.features{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.features{grid-template-columns:1fr;}}
+  .feature{
+    background:#fff; border:1px solid var(--line); border-radius:10px; padding:26px 22px;
+    text-align:center;
+  }
+  .feature .ic{
+    width:48px;height:48px;border-radius:50%;margin:0 auto 14px;
+    background:linear-gradient(180deg,var(--gold-light),var(--gold));
+    display:flex;align-items:center;justify-content:center;color:#241b06;font-weight:800;font-family:Arial,sans-serif;
+  }
+  .feature h4{font-size:16px;margin-bottom:8px;}
+  .feature p{font-size:14px;color:#5a5648;}
+
+  /* Collection strip */
+  .countries{
+    display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:30px;
+  }
+  .country-chip{
+    font-family:Arial,sans-serif; font-size:13px; background:#fff; border:1px solid var(--line);
+    padding:9px 16px; border-radius:30px; color:#4a4636;
+  }
+
+  /* Specs table */
+  table.specs{width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--line); border-radius:10px; overflow:hidden;}
+  table.specs td{padding:15px 20px; border-bottom:1px solid var(--line); font-family:Arial,sans-serif; font-size:14.5px;}
+  table.specs tr:last-child td{border-bottom:none;}
+  table.specs td:first-child{color:#7a7460; width:42%;}
+  table.specs td:last-child{font-weight:700;}
+
+  /* Guarantee banner */
+  .guarantee{
+    background:var(--ink); color:#f0e6c8; border-radius:14px; padding:44px; text-align:center;
+  }
+  .guarantee h3{font-size:22px; margin-bottom:12px; color:#fff;}
+  .guarantee p{max-width:600px; margin:0 auto 22px; color:#cbbd93;}
+
+  /* Testimonials */
+  .testi-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  @media(max-width:850px){.testi-grid{grid-template-columns:1fr;}}
+  .testi{background:#fff; border:1px solid var(--line); border-radius:10px; padding:24px;}
+  .stars{color:var(--gold); font-size:15px; margin-bottom:10px; letter-spacing:2px;}
+  .testi p{font-size:14.5px; color:#403d33; margin-bottom:14px;}
+  .testi .who{font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:#7a6733;}
+
+  /* FAQ */
+  .faq-item{border-bottom:1px solid var(--line); padding:18px 0;}
+  .faq-item summary{cursor:pointer; font-weight:700; font-size:16px; list-style:none; position:relative; padding-right:24px;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:"+"; position:absolute; right:0; top:0; font-size:20px; color:var(--gold-dark);}
+  .faq-item[open] summary::after{content:"–";}
+  .faq-item p{margin-top:10px; color:#5a5648; font-size:14.5px;}
+
+  /* Final CTA */
+  .final-cta{
+    background:linear-gradient(160deg,#2a2213,#1b1a17); color:#f4ecd8; text-align:center; border-radius:16px;
+    padding:56px 24px;
+  }
+  .final-cta h2{color:#fff; font-size:clamp(22px,3vw,30px); margin-bottom:14px;}
+  .final-cta p{color:#cbbd93; max-width:520px; margin:0 auto 26px;}
+
+  /* Sticky order bar */
+  .sticky-bar{
+    position:sticky; bottom:0; z-index:50; background:#fff; border-top:1px solid var(--line);
+    box-shadow:0 -6px 18px rgba(0,0,0,.08);
+  }
+  .sticky-bar .wrap{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 20px; flex-wrap:wrap;}
+  .sticky-bar .price{font-family:Arial,sans-serif; font-weight:800; color:var(--gold-dark); font-size:15px;}
+
+  footer{background:var(--ink); color:#a4967a; padding:40px 0 24px; font-family:Arial,sans-serif; font-size:13px;}
+  footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px;}
+  footer a{color:#cbbd93; text-decoration:none;}
+  footer .legal{margin-top:22px; font-size:11.5px; color:#6b6350; text-align:center; width:100%;}
+
+  .badge-note{
+    background:#fff8e6; border:1px solid var(--line); color:#6b5b21; font-family:Arial,sans-serif;
+    font-size:12.5px; padding:10px 16px; border-radius:8px; text-align:center; margin-top:16px;
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">🎖️ Limitowana edycja — dostępnych już tylko <b>ostatnie egzemplarze</b> z pierwszej transzy | Darmowa wycena kolekcji przez telefon</div>
+
+<header class="site">
+  <div class="wrap">
+    <div class="logo">AZ <span>AURUM</span></div>
+    <div class="contact-line">
+      <div><b>784 622 333</b> · pon–pt, 9:00–17:00</div>
+      <div>sklep@azaurum-sklep.pl</div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Kolekcja „Historia Złotych Euro” · Watykan, 2002</div>
+      <h1>Pierwsza złota moneta Euro świata<br><em>z wizerunkiem Jana Pawła II</em></h1>
+      <p class="lead">Oficjalna, kolekcjonerska moneta wybita z czystego złota próby 9999, będąca prawnym środkiem płatniczym Watykanu. Dołącz do limitowanej kolekcji zaledwie 7 500 egzemplarzy na świecie.</p>
+      <a href="#zamow" class="btn">Chcę zamówić monetę</a>
+      <div class="trust-row">
+        <div><span class="dot"></span> Certyfikat autentyczności</div>
+        <div><span class="dot"></span> Złoto próby 9999</div>
+        <div><span class="dot"></span> 14 dni na zwrot</div>
+        <div><span class="dot"></span> Mennica niemiecka</div>
+      </div>
+    </div>
+    <div class="coin-card">
+      <div class="coin-visual"><span>JAN PAWEŁ II<br>100 FRANKÓW CFA<br>WATYKAN · 2002</span></div>
+      <div class="price-block">
+        <div class="price-old">329 zł</div>
+        <div class="price-new">259 zł</div>
+        <div class="price-save">Oszczędzasz 70 zł</div><br>
+        <a href="#zamow" class="btn btn-sm">Tak, zamawiam</a>
+        <div class="micro">+ 14,99 zł wysyłka · płatność przy realizacji zamówienia</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">O monecie</div>
+      <h2>Moneta, która łączy wiarę, historię i wartość inwestycyjną</h2>
+      <p>W 2002 roku Watykan jako jeden z pierwszych krajów wprowadził do obiegu złote monety Euro. Na awersie umieszczono podobiznę Ojca Świętego Jana Pawła II, a na rewersie — symboliczne przedstawienie Arki Noego, nawiązujące do biblijnej opowieści o nadziei i nowym początku.</p>
+    </div>
+
+    <div class="story-grid">
+      <div class="ph">Zdjęcie monety — awers / rewers</div>
+      <div>
+        <h3>Symbol wiary w Twojej kolekcji</h3>
+        <p>To nie jest zwykła pamiątka. To autentyczna, prawnie obowiązująca moneta o wymiarach zaledwie 15,2 × 8,6 mm i wadze 1/200 uncji, wybita w czystym złocie próby 9999 przez prestiżową mennicę niemiecką — z zachowaniem najwyższych standardów menniczych.</p>
+        <blockquote>„Każdy egzemplarz kolekcji trafia do Ciebie w eleganckiej szkatule kolekcjonerskiej wraz z certyfikatem autentyczności — gotowy do ekspozycji lub przekazania w rodzinie.”</blockquote>
+        <p>Dzięki niewielkim nakładom emisyjnym moneta stanowi rzadkość poszukiwaną przez kolekcjonerów numizmatyki papieskiej i miłośników historii Watykanu na całym świecie.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Dlaczego warto</div>
+      <h2>Cztery powody, dla których warto dołączyć do kolekcji</h2>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="ic">Au</div>
+        <h4>Czyste złoto 9999</h4>
+        <p>Najwyższa dostępna próba złota, gwarantująca trwałość i realną wartość kruszcową.</p>
+      </div>
+      <div class="feature">
+        <div class="ic">✓</div>
+        <h4>Certyfikat autentyczności</h4>
+        <p>Każda moneta posiada numerowany certyfikat potwierdzający jej pochodzenie i skład.</p>
+      </div>
+      <div class="feature">
+        <div class="ic">7.5K</div>
+        <h4>Limitowany nakład</h4>
+        <p>Zaledwie 7 500 zestawów kolekcji wyemitowanych na cały świat.</p>
+      </div>
+      <div class="feature">
+        <div class="ic">14</div>
+        <h4>14 dni na decyzję</h4>
+        <p>Spokojnie zapoznaj się z monetą — jeśli zmienisz zdanie, zwrot jest prosty.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Kolekcja</div>
+      <h2>„Historia Złotych Euro” — podróż po mennicach Europy</h2>
+      <p>W skład kolekcji wchodzą złote monety emitowane przez pierwsze kraje strefy euro. Co miesiąc, w Twoim tempie, kolekcja rozrasta się o kolejny, starannie wyselekcjonowany egzemplarz.</p>
+    </div>
+    <div class="countries">
+      <div class="country-chip">🇻🇦 Watykan</div>
+      <div class="country-chip">🇦🇹 Austria</div>
+      <div class="country-chip">🇧🇪 Belgia</div>
+      <div class="country-chip">🇫🇮 Finlandia</div>
+      <div class="country-chip">🇫🇷 Francja</div>
+      <div class="country-chip">🇩🇪 Niemcy</div>
+      <div class="country-chip">+ kolejne kraje strefy euro</div>
+    </div>
+    <div class="badge-note">Kolejne monety kolekcji wysyłane są w odstępach miesięcznych w cenie 329 zł/szt. Kolekcję możesz przerwać w dowolnym momencie — bez zobowiązań.</div>
+  </div>
+</section>
+
+<section class="alt" id="specyfikacja">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Specyfikacja</div>
+      <h2>Parametry techniczne monety</h2>
+    </div>
+    <table class="specs">
+      <tr><td>Metal</td><td>Złoto próby 9999</td></tr>
+      <tr><td>Nominał</td><td>100 franków CFA</td></tr>
+      <tr><td>Kraj emisji</td><td>Wybrzeże Kości Słoniowej (emisja pod patronatem Watykanu)</td></tr>
+      <tr><td>Wymiary</td><td>15,2 × 8,6 mm</td></tr>
+      <tr><td>Waga</td><td>1/200 uncji</td></tr>
+      <tr><td>Mennica</td><td>Prestiżowa mennica niemiecka</td></tr>
+      <tr><td>Nakład</td><td>7 500 zestawów kolekcji na świecie</td></tr>
+      <tr><td>W zestawie</td><td>Moneta, szkatuła kolekcjonerska, certyfikat autentyczności</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="guarantee">
+      <h3>🛡️ Gwarancja spokojnego zakupu — 14 dni</h3>
+      <p>Zamów monetę bez ryzyka. Masz 14 dni na dokładne zapoznanie się z egzemplarzem — jeśli z jakiegokolwiek powodu nie spełni Twoich oczekiwań, możesz dokonać zwrotu (koszt przesyłki zwrotnej po stronie klienta).</p>
+      <a href="#zamow" class="btn btn-sm">Zamawiam z gwarancją</a>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Opinie kolekcjonerów</div>
+      <h2>Co mówią osoby, które już dołączyły do kolekcji</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi">
+        <div class="stars">★★★★★</div>
+        <p>„Moneta zrobiła na mnie ogromne wrażenie — wykonanie i detale są naprawdę na najwyższym poziomie. Szkatuła prezentuje się elegancko.”</p>
+        <div class="who">— Przykładowa opinia klienta</div>
+      </div>
+      <div class="testi">
+        <div class="stars">★★★★★</div>
+        <p>„Zamówienie przyszło szybko, wraz z certyfikatem. Idealny pomysł na prezent rodzinny o wyjątkowym znaczeniu.”</p>
+        <div class="who">— Przykładowa opinia klienta</div>
+      </div>
+      <div class="testi">
+        <div class="stars">★★★★★</div>
+        <p>„Jako kolekcjoner numizmatów doceniam jakość wykonania i rzetelny opis. Czekam na kolejne monety z serii.”</p>
+        <div class="who">— Przykładowa opinia klienta</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap" style="max-width:800px;">
+    <div class="section-head">
+      <div class="eyebrow">Pytania i odpowiedzi</div>
+      <h2>Najczęściej zadawane pytania</h2>
+    </div>
+    <details class="faq-item" open>
+      <summary>Czy moneta jest prawdziwym złotem?</summary>
+      <p>Tak, moneta wykonana jest ze złota próby 9999, czyli złota najwyższej dostępnej czystości.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Czy muszę kontynuować całą kolekcję?</summary>
+      <p>Nie. Po otrzymaniu pierwszej monety możesz w dowolnym momencie zrezygnować z dalszych wysyłek kolejnych egzemplarzy kolekcji.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Jak wygląda dostawa?</summary>
+      <p>Zamówienie wysyłane jest w bezpiecznym, dyskretnym opakowaniu. Koszt przesyłki wynosi 14,99 zł.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Czy mogę zwrócić monetę?</summary>
+      <p>Tak, masz 14 dni od otrzymania przesyłki na podjęcie decyzji o zwrocie. Koszt przesyłki zwrotnej pokrywa klient.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Jak się z Wami skontaktować?</summary>
+      <p>Zadzwoń pod numer 784 622 333 (pon–pt, 9:00–17:00) lub napisz na sklep@azaurum-sklep.pl.</p>
+    </details>
+  </div>
+</section>
+
+<section id="zamow">
+  <div class="wrap">
+    <div class="final-cta">
+      <div class="eyebrow" style="color:var(--gold-light);">Oferta ograniczona czasowo</div>
+      <h2>Zabezpiecz swój egzemplarz „Historii Złotych Euro”</h2>
+      <p>Cena promocyjna 259 zł zamiast 329 zł obowiązuje tylko dla ograniczonej liczby egzemplarzy z bieżącej transzy.</p>
+      <a href="#" class="btn">Tak, zamawiam monetę</a>
+      <div class="micro" style="margin-top:14px;">Bezpieczne zamówienie · Certyfikat autentyczności · Gwarancja zwrotu 14 dni</div>
+    </div>
+  </div>
+</section>
+
+<div class="sticky-bar">
+  <div class="wrap">
+    <div class="price">Historia Złotych Euro — <span style="color:var(--ink)">259 zł</span> <span style="text-decoration:line-through;color:#a4967a;font-weight:400;">329 zł</span></div>
+    <a href="#zamow" class="btn btn-sm">Zamawiam</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div style="color:#f4ecd8; font-weight:700; margin-bottom:8px;">AZ AURUM</div>
+      <div>Tel: 784 622 333 (pon–pt, 9:00–17:00)</div>
+      <div>Email: sklep@azaurum-sklep.pl</div>
+    </div>
+    <div>
+      <div style="color:#f4ecd8; font-weight:700; margin-bottom:8px;">Informacje</div>
+      <div><a href="#specyfikacja">Specyfikacja produktu</a></div>
+      <div><a href="#zamow">Regulamin sklepu</a></div>
+      <div><a href="#zamow">Polityka prywatności</a></div>
+    </div>
+  </div>
+  <div class="legal wrap">
+    To jest szablon strony (demo) przygotowany na bazie treści produktowej. Nie zawiera aktywnej bramki płatności. © 2026 AZ Aurum. Wszelkie prawa zastrzeżone.
+  </div>
+</footer>
+
+</body>
+</html>
