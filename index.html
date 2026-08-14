@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Historia Złotych Euro | Jan Paweł II – Watykańska Moneta Kolekcjonerska</title>
+<link rel="icon" type="image/png" href="images/logoAZ-mailing.png">
 <meta name="description" content="Wyjątkowa złota moneta upamiętniająca Jana Pawła II – pierwsze złote Euro Watykanu. Limitowana kolekcja, certyfikat autentyczności, gwarancja 14 dni.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,7 +73,8 @@
     padding:18px 0;
   }
   header.site .wrap{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap;}
-  .logo{font-size:22px; font-weight:800; letter-spacing:1px;}
+  .logo{font-size:22px; font-weight:800; letter-spacing:1px; display:flex; align-items:center; gap:10px;}
+  .logo img{width:32px; height:32px;}
   .logo span{color:var(--gold-dark);}
   .contact-line{font-family:'Work Sans', sans-serif; font-size:13px; text-align:right; color:#555;}
   .contact-line b{color:var(--ink);}
@@ -146,10 +148,12 @@
   @media(max-width:850px){.story-grid{grid-template-columns:1fr;}}
   .story-grid .ph{
     aspect-ratio:4/3; border-radius:12px;
-    background:linear-gradient(135deg,#efe3c2,#d9c48f);
-    display:flex;align-items:center;justify-content:center;
-    font-family:'Work Sans', sans-serif; color:#7a6733; font-size:13px; letter-spacing:1px;
+    overflow:hidden;
     border:1px solid var(--line);
+    box-shadow:0 16px 34px rgba(0,0,0,.12);
+  }
+  .story-grid .ph img{
+    width:100%; height:100%; object-fit:cover; object-position:center 22%;
   }
   .story-grid h3{font-size:23px; margin-bottom:14px;}
   .story-grid p{color:#403d33; margin-bottom:14px;}
@@ -176,24 +180,23 @@
   .feature h4{font-size:16px;margin-bottom:8px;}
   .feature p{font-size:14px;color:#5a5648;}
 
-  /* Collection strip */
-  .countries{
-    display:flex; flex-wrap:wrap; gap:26px; justify-content:center; margin-top:36px;
+  /* Collection strip — coin closeup gallery */
+  .coin-gallery{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:36px;
   }
-  .country-coin{
-    width:104px; text-align:center; font-family:'Work Sans', sans-serif;
+  @media(max-width:850px){ .coin-gallery{ grid-template-columns:repeat(2,1fr); } }
+  .coin-gallery figure{
+    margin:0; border-radius:10px; overflow:hidden; border:1px solid var(--line);
+    box-shadow:0 10px 22px rgba(0,0,0,.10); background:#000;
   }
-  .country-coin .medal{
-    width:64px; height:64px; border-radius:50%; margin:0 auto 10px;
-    background:radial-gradient(circle at 32% 28%, #fff6d6, #e8c976 32%, #b8862f 64%, #6f5117 100%);
-    border:3px solid #7a5a1c;
-    display:flex; align-items:center; justify-content:center;
-    box-shadow:0 6px 14px rgba(0,0,0,.18), inset 0 3px 6px rgba(255,255,255,.5), inset 0 -5px 10px rgba(0,0,0,.3);
-    font-weight:800; font-size:14px; color:#5e460f; letter-spacing:.5px;
+  .coin-gallery img{
+    width:100%; aspect-ratio:1/1; object-fit:cover; display:block;
+    transition:transform .4s ease;
   }
-  .country-coin .name{font-size:12.5px; font-weight:700; color:#4a4636; letter-spacing:.3px;}
-  .country-coin.more .medal{
-    background:linear-gradient(160deg,#efe3c2,#d9c48f); color:#7a6733; font-size:20px;
+  .coin-gallery figure:hover img{ transform:scale(1.08); }
+  .coin-gallery figcaption{
+    font-family:'Work Sans', sans-serif; font-size:12px; font-weight:700; letter-spacing:.3px;
+    text-align:center; padding:10px 8px; background:#fff; color:#4a4636;
   }
 
   /* Specs table */
@@ -255,9 +258,9 @@
   /* ===== Promo banner (hero replacement) ===== */
   .promo-banner{
     position:relative;
-    background-color:#2a2213;
+    background-color:#f7f2e4;
     background-image:
-      linear-gradient(rgba(20,18,12,.42),rgba(20,18,12,.6)),
+      linear-gradient(rgba(250,246,238,.62),rgba(250,246,238,.8)),
       url("images/TLO2.jpg");
     background-size:cover;
     background-position:center 30%;
@@ -266,26 +269,31 @@
     text-align:center;
   }
   @media (max-width:900px){ .promo-banner{ background-attachment:scroll; } }
+  .promo-hero-grid{
+    display:grid; grid-template-columns:1.05fr .95fr; gap:44px; align-items:center;
+  }
+  @media (max-width:900px){ .promo-hero-grid{ grid-template-columns:1fr; } }
+  .order-form-compact{ margin:0; max-width:none; padding:30px; box-shadow:0 20px 44px rgba(0,0,0,.14); }
 
   /* ===== Parallax (fixed background) sections ===== */
   .parallax{
     position:relative;
-    color:#f4ecd8;
-    background-color:#1b1a17;
+    color:var(--ink);
+    background-color:#f7f2e4;
     background-image:
-      linear-gradient(rgba(20,18,12,.55),rgba(20,18,12,.68)),
+      linear-gradient(rgba(250,246,238,.68),rgba(250,246,238,.85)),
       url("images/TLO2.jpg");
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
   }
   @media (max-width:900px){ .parallax{ background-attachment:scroll; } }
-  .parallax .section-head p{color:#cbbd93;}
-  .parallax .section-head .eyebrow{color:var(--gold-light);}
-  .parallax h2{color:#fff;}
-  .parallax .feature{background:rgba(27,26,23,.55); border-color:#4a3c1e;}
-  .parallax .feature h4{color:#f4ecd8;}
-  .parallax .feature p{color:#cbbd93;}
+  .parallax .section-head p{color:#5a5648;}
+  .parallax .section-head .eyebrow{color:var(--gold-dark);}
+  .parallax h2{color:var(--ink);}
+  .parallax .feature{background:rgba(255,255,255,.78); border-color:var(--line);}
+  .parallax .feature h4{color:var(--ink);}
+  .parallax .feature p{color:#5a5648;}
   .parallax .feature .ic{color:#241b06;}
 
   /* ===== Order form ===== */
@@ -340,7 +348,7 @@
 
 <header class="site">
   <div class="wrap">
-    <div class="logo">AZ <span>AURUM</span></div>
+    <div class="logo"><img src="images/logoAZ-mailing.png" alt="AZ Aurum"> AZ <span>AURUM</span></div>
     <div class="contact-line">
       <div><b>784 622 333</b> · pon–pt, 9:00–17:00</div>
       <div>sklep@azaurum-sklep.pl</div>
@@ -348,17 +356,72 @@
   </div>
 </header>
 
-<section class="promo-banner">
-  <div class="wrap" style="max-width:640px;">
-    <img src="images/baner-hze-nowa-test2.png" alt="Watykan — pierwsza złota moneta Euro, kolekcja Historia Złotych Euro, cena specjalna 259 zł" style="width:100%; height:auto; margin-bottom:30px;">
+<section class="promo-banner" id="formularz">
+  <div class="wrap promo-hero-grid">
+    <div class="promo-hero-left">
+      <img src="images/baner-hze-nowa-test2.png" alt="Watykan — pierwsza złota moneta Euro, kolekcja Historia Złotych Euro, cena specjalna 259 zł" style="width:100%; height:auto; margin-bottom:26px;">
 
-    <a href="#zamow" class="btn">Chcę zamówić monetę</a>
+      <div class="trust-row" style="justify-content:center; color:#4a4636;">
+        <div><span class="dot"></span> Certyfikat autentyczności</div>
+        <div><span class="dot"></span> Złoto próby 9999</div>
+        <div><span class="dot"></span> 14 dni na zwrot</div>
+        <div><span class="dot"></span> Mennica niemiecka</div>
+      </div>
+    </div>
 
-    <div class="trust-row" style="justify-content:center; color:#e6dcc0; margin-top:30px;">
-      <div><span class="dot"></span> Certyfikat autentyczności</div>
-      <div><span class="dot"></span> Złoto próby 9999</div>
-      <div><span class="dot"></span> 14 dni na zwrot</div>
-      <div><span class="dot"></span> Mennica niemiecka</div>
+    <div class="promo-hero-right">
+      <form class="order-form order-form-compact" onsubmit="event.preventDefault(); alert('To wersja demonstracyjna szablonu — zamówienia nie są jeszcze obsługiwane.');">
+        <div class="eyebrow" style="text-align:center; display:block; margin-bottom:6px;">Formularz testowy</div>
+        <h2 style="text-align:center; font-size:22px; margin-bottom:22px;">Zamów monetę „Historia Złotych Euro”</h2>
+        <div class="row">
+          <div>
+            <label for="imie">Imię i nazwisko</label>
+            <input id="imie" type="text" placeholder="Jan Kowalski" required>
+          </div>
+          <div>
+            <label for="tel">Telefon</label>
+            <input id="tel" type="tel" placeholder="+48 600 000 000" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="full">
+            <label for="email">Adres e-mail</label>
+            <input id="email" type="email" placeholder="jan.kowalski@przyklad.pl" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="full">
+            <label for="adres">Adres dostawy</label>
+            <input id="adres" type="text" placeholder="Ulica, numer domu/mieszkania">
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="miasto">Miasto</label>
+            <input id="miasto" type="text" placeholder="Warszawa">
+          </div>
+          <div>
+            <label for="kod">Kod pocztowy</label>
+            <input id="kod" type="text" placeholder="00-000">
+          </div>
+        </div>
+        <div class="row">
+          <div class="full">
+            <label for="ilosc">Liczba egzemplarzy</label>
+            <select id="ilosc">
+              <option>1 moneta — 259 zł</option>
+              <option>2 monety — 518 zł</option>
+              <option>3 monety — 777 zł</option>
+            </select>
+          </div>
+        </div>
+        <div class="order-summary">
+          <span>Razem do zapłaty (+ 14,99 zł wysyłka)</span>
+          <b>273,99 zł</b>
+        </div>
+        <button type="submit" class="btn">Wyślij zamówienie</button>
+        <div class="order-note">To formularz demonstracyjny — zamówienia nie są rejestrowane ani przekazywane do realizacji.</div>
+      </form>
     </div>
   </div>
 </section>
@@ -372,7 +435,7 @@
     </div>
 
     <div class="story-grid">
-      <div class="ph">Zdjęcie monety — awers / rewers</div>
+      <div class="ph"><img src="images/baner-hze-nowa-test2.png" alt="Złota moneta First Gold-Euro — Watykan 2002, awers i rewers"></div>
       <div>
         <h3>Symbol wiary w Twojej kolekcji</h3>
         <p>To nie jest zwykła pamiątka. To autentyczna, prawnie obowiązująca moneta o wymiarach zaledwie 15,2 × 8,6 mm i wadze 1/200 uncji, wybita w czystym złocie próby 9999 przez prestiżową mennicę niemiecką — z zachowaniem najwyższych standardów menniczych.</p>
@@ -421,16 +484,25 @@
       <h2>„Historia Złotych Euro” — podróż po mennicach Europy</h2>
       <p>W skład kolekcji wchodzą złote monety emitowane przez pierwsze kraje strefy euro. Co miesiąc, w Twoim tempie, kolekcja rozrasta się o kolejny, starannie wyselekcjonowany egzemplarz.</p>
     </div>
-    <div class="countries">
-      <div class="country-coin"><div class="medal">VA</div><div class="name">Watykan</div></div>
-      <div class="country-coin"><div class="medal">AT</div><div class="name">Austria</div></div>
-      <div class="country-coin"><div class="medal">BE</div><div class="name">Belgia</div></div>
-      <div class="country-coin"><div class="medal">FI</div><div class="name">Finlandia</div></div>
-      <div class="country-coin"><div class="medal">FR</div><div class="name">Francja</div></div>
-      <div class="country-coin"><div class="medal">DE</div><div class="name">Niemcy</div></div>
-      <div class="country-coin more"><div class="medal">+</div><div class="name">Kolejne kraje</div></div>
+    <div class="coin-gallery">
+      <figure>
+        <img src="images/baner-hze-nowa-test2.png" style="object-position:center 20%;" alt="Zbliżenie: awers i rewers monety Watykan 2002">
+        <figcaption>Watykan · 2002</figcaption>
+      </figure>
+      <figure>
+        <img src="images/baner-hze-nowa-test2.png" style="object-position:center 8%;" alt="Zbliżenie: złota sztaba kolekcji Historia Złotych Euro">
+        <figcaption>Sztaba kolekcjonerska</figcaption>
+      </figure>
+      <figure>
+        <img src="images/baner-hze-nowa-test2.png" style="object-position:80% 18%;" alt="Zbliżenie: rewers monety z mapą Europy">
+        <figcaption>Rewers · mapa Europy</figcaption>
+      </figure>
+      <figure>
+        <img src="images/baner-hze-nowa-test2.png" style="object-position:center 78%;" alt="Zbliżenie: certyfikat autentyczności i szkatuła kolekcjonerska">
+        <figcaption>Certyfikat i szkatuła</figcaption>
+      </figure>
     </div>
-    <div class="badge-note">Kolejne monety kolekcji wysyłane są w odstępach miesięcznych w cenie 329 zł/szt. Kolekcję możesz przerwać w dowolnym momencie — bez zobowiązań.</div>
+    <div class="badge-note" style="margin-top:22px;">Zdjęcia poglądowe. Kolejne monety kolekcji wysyłane są w odstępach miesięcznych w cenie 329 zł/szt. Kolekcję możesz przerwać w dowolnym momencie — bez zobowiązań.</div>
   </div>
 </section>
 
@@ -532,67 +604,6 @@
     </div>
   </div>
 </section>
-
-<section class="alt reveal" id="formularz">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Formularz testowy</div>
-      <h2>Zamów monetę „Historia Złotych Euro”</h2>
-      <p>Wypełnij dane, aby zarezerwować egzemplarz. To wersja demonstracyjna formularza — bez podłączonej bramki płatności.</p>
-    </div>
-    <form class="order-form" onsubmit="event.preventDefault(); alert('To wersja demonstracyjna szablonu — zamówienia nie są jeszcze obsługiwane.');">
-      <div class="row">
-        <div>
-          <label for="imie">Imię i nazwisko</label>
-          <input id="imie" type="text" placeholder="Jan Kowalski" required>
-        </div>
-        <div>
-          <label for="tel">Telefon</label>
-          <input id="tel" type="tel" placeholder="+48 600 000 000" required>
-        </div>
-      </div>
-      <div class="row">
-        <div class="full">
-          <label for="email">Adres e-mail</label>
-          <input id="email" type="email" placeholder="jan.kowalski@przyklad.pl" required>
-        </div>
-      </div>
-      <div class="row">
-        <div class="full">
-          <label for="adres">Adres dostawy</label>
-          <input id="adres" type="text" placeholder="Ulica, numer domu/mieszkania">
-        </div>
-      </div>
-      <div class="row">
-        <div>
-          <label for="miasto">Miasto</label>
-          <input id="miasto" type="text" placeholder="Warszawa">
-        </div>
-        <div>
-          <label for="kod">Kod pocztowy</label>
-          <input id="kod" type="text" placeholder="00-000">
-        </div>
-      </div>
-      <div class="row">
-        <div class="full">
-          <label for="ilosc">Liczba egzemplarzy</label>
-          <select id="ilosc">
-            <option>1 moneta — 259 zł</option>
-            <option>2 monety — 518 zł</option>
-            <option>3 monety — 777 zł</option>
-          </select>
-        </div>
-      </div>
-      <div class="order-summary">
-        <span>Razem do zapłaty (+ 14,99 zł wysyłka)</span>
-        <b>273,99 zł</b>
-      </div>
-      <button type="submit" class="btn">Wyślij zamówienie</button>
-      <div class="order-note">To formularz demonstracyjny — zamówienia nie są rejestrowane ani przekazywane do realizacji.</div>
-    </form>
-  </div>
-</section>
-
 <div class="sticky-bar">
   <div class="wrap">
     <div class="price">Historia Złotych Euro — <span style="color:var(--ink)">259 zł</span> <span style="text-decoration:line-through;color:#a4967a;font-weight:400;">329 zł</span></div>
@@ -603,7 +614,7 @@
 <footer>
   <div class="wrap">
     <div>
-      <div style="color:#f4ecd8; font-weight:700; margin-bottom:8px;">AZ AURUM</div>
+      <img src="images/logoAZ-gr.png" alt="AZ Aurum — Numizmatyka Adam Zieliński" style="width:170px; height:auto; background:#fff; border-radius:8px; padding:10px; margin-bottom:14px;">
       <div>Tel: 784 622 333 (pon–pt, 9:00–17:00)</div>
       <div>Email: sklep@azaurum-sklep.pl</div>
     </div>
