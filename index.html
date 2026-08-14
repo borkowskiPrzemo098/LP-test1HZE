@@ -178,11 +178,22 @@
 
   /* Collection strip */
   .countries{
-    display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:30px;
+    display:flex; flex-wrap:wrap; gap:26px; justify-content:center; margin-top:36px;
   }
-  .country-chip{
-    font-family:'Work Sans', sans-serif; font-size:13px; background:#fff; border:1px solid var(--line);
-    padding:9px 16px; border-radius:30px; color:#4a4636;
+  .country-coin{
+    width:104px; text-align:center; font-family:'Work Sans', sans-serif;
+  }
+  .country-coin .medal{
+    width:64px; height:64px; border-radius:50%; margin:0 auto 10px;
+    background:radial-gradient(circle at 32% 28%, #fff6d6, #e8c976 32%, #b8862f 64%, #6f5117 100%);
+    border:3px solid #7a5a1c;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 6px 14px rgba(0,0,0,.18), inset 0 3px 6px rgba(255,255,255,.5), inset 0 -5px 10px rgba(0,0,0,.3);
+    font-weight:800; font-size:14px; color:#5e460f; letter-spacing:.5px;
+  }
+  .country-coin .name{font-size:12.5px; font-weight:700; color:#4a4636; letter-spacing:.3px;}
+  .country-coin.more .medal{
+    background:linear-gradient(160deg,#efe3c2,#d9c48f); color:#7a6733; font-size:20px;
   }
 
   /* Specs table */
@@ -243,10 +254,18 @@
 
   /* ===== Promo banner (hero replacement) ===== */
   .promo-banner{
-    background:#fdfbf5;
-    padding:56px 0 42px;
+    position:relative;
+    background-color:#2a2213;
+    background-image:
+      linear-gradient(rgba(20,18,12,.42),rgba(20,18,12,.6)),
+      url("images/TLO2.jpg");
+    background-size:cover;
+    background-position:center 30%;
+    background-attachment:fixed;
+    padding:64px 0 50px;
     text-align:center;
   }
+  @media (max-width:900px){ .promo-banner{ background-attachment:scroll; } }
   .promo-title h1{
     font-size:clamp(38px,7vw,64px); color:#152244; letter-spacing:2px; line-height:1;
   }
@@ -368,11 +387,25 @@
     display:flex;align-items:center;justify-content:center;font-size:18px;
     border:1px solid var(--line);
   }
+
+  /* ===== Scroll reveal ===== */
+  .reveal{
+    opacity:0;
+    transform:translateY(28px);
+    transition:opacity .7s ease, transform .7s ease;
+  }
+  .reveal.is-visible{
+    opacity:1;
+    transform:translateY(0);
+  }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1; transform:none; transition:none;}
+  }
 </style>
 </head>
 <body>
 
-<div class="topbar">🎖️ Limitowana edycja — dostępnych już tylko <b>ostatnie egzemplarze</b> z pierwszej transzy | Darmowa wycena kolekcji przez telefon</div>
+<div class="topbar"><svg class="tb-ic" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:-2px; margin-right:5px;"><path d="M12 2l2.5 5.5L20 8.5l-4 4 1 5.5L12 15.5 7 18l1-5.5-4-4 5.5-1L12 2z" fill="#e8c976"/></svg> Limitowana edycja — dostępnych już tylko <b>ostatnie egzemplarze</b> z pierwszej transzy | Darmowa wycena kolekcji przez telefon</div>
 
 <header class="site">
   <div class="wrap">
@@ -390,7 +423,7 @@
 
     <a href="#zamow" class="btn">Chcę zamówić monetę</a>
 
-    <div class="trust-row" style="justify-content:center; color:#7a7460; margin-top:30px;">
+    <div class="trust-row" style="justify-content:center; color:#e6dcc0; margin-top:30px;">
       <div><span class="dot"></span> Certyfikat autentyczności</div>
       <div><span class="dot"></span> Złoto próby 9999</div>
       <div><span class="dot"></span> 14 dni na zwrot</div>
@@ -399,7 +432,7 @@
   </div>
 </section>
 
-<section>
+<section class="reveal">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">O monecie</div>
@@ -419,7 +452,7 @@
   </div>
 </section>
 
-<section class="parallax">
+<section class="parallax reveal">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Dlaczego warto</div>
@@ -450,7 +483,7 @@
   </div>
 </section>
 
-<section>
+<section class="reveal">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Kolekcja</div>
@@ -458,19 +491,19 @@
       <p>W skład kolekcji wchodzą złote monety emitowane przez pierwsze kraje strefy euro. Co miesiąc, w Twoim tempie, kolekcja rozrasta się o kolejny, starannie wyselekcjonowany egzemplarz.</p>
     </div>
     <div class="countries">
-      <div class="country-chip">🇻🇦 Watykan</div>
-      <div class="country-chip">🇦🇹 Austria</div>
-      <div class="country-chip">🇧🇪 Belgia</div>
-      <div class="country-chip">🇫🇮 Finlandia</div>
-      <div class="country-chip">🇫🇷 Francja</div>
-      <div class="country-chip">🇩🇪 Niemcy</div>
-      <div class="country-chip">+ kolejne kraje strefy euro</div>
+      <div class="country-coin"><div class="medal">VA</div><div class="name">Watykan</div></div>
+      <div class="country-coin"><div class="medal">AT</div><div class="name">Austria</div></div>
+      <div class="country-coin"><div class="medal">BE</div><div class="name">Belgia</div></div>
+      <div class="country-coin"><div class="medal">FI</div><div class="name">Finlandia</div></div>
+      <div class="country-coin"><div class="medal">FR</div><div class="name">Francja</div></div>
+      <div class="country-coin"><div class="medal">DE</div><div class="name">Niemcy</div></div>
+      <div class="country-coin more"><div class="medal">+</div><div class="name">Kolejne kraje</div></div>
     </div>
     <div class="badge-note">Kolejne monety kolekcji wysyłane są w odstępach miesięcznych w cenie 329 zł/szt. Kolekcję możesz przerwać w dowolnym momencie — bez zobowiązań.</div>
   </div>
 </section>
 
-<section class="alt" id="specyfikacja">
+<section class="alt reveal" id="specyfikacja">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Specyfikacja</div>
@@ -489,17 +522,17 @@
   </div>
 </section>
 
-<section class="parallax">
+<section class="parallax reveal">
   <div class="wrap">
     <div class="guarantee">
-      <h3>🛡️ Gwarancja spokojnego zakupu — 14 dni</h3>
+      <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:-5px; margin-right:8px;"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z" stroke="#e8c976" stroke-width="1.6" fill="rgba(232,201,118,.12)"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="#e8c976" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Gwarancja spokojnego zakupu — 14 dni</h3>
       <p>Zamów monetę bez ryzyka. Masz 14 dni na dokładne zapoznanie się z egzemplarzem — jeśli z jakiegokolwiek powodu nie spełni Twoich oczekiwań, możesz dokonać zwrotu (koszt przesyłki zwrotnej po stronie klienta).</p>
       <a href="#zamow" class="btn btn-sm">Zamawiam z gwarancją</a>
     </div>
   </div>
 </section>
 
-<section class="alt">
+<section class="alt reveal">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Opinie kolekcjonerów</div>
@@ -507,19 +540,19 @@
     </div>
     <div class="testi-grid">
       <div class="testi">
-        <div class="avatar-ph">👤</div>
+        <div class="avatar-ph"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="4" fill="#7a5a1c"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7" stroke="#7a5a1c" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></div>
         <div class="stars">★★★★★</div>
         <p>„Moneta zrobiła na mnie ogromne wrażenie — wykonanie i detale są naprawdę na najwyższym poziomie. Szkatuła prezentuje się elegancko.”</p>
         <div class="who">— Przykładowa opinia klienta</div>
       </div>
       <div class="testi">
-        <div class="avatar-ph">👤</div>
+        <div class="avatar-ph"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="4" fill="#7a5a1c"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7" stroke="#7a5a1c" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></div>
         <div class="stars">★★★★★</div>
         <p>„Zamówienie przyszło szybko, wraz z certyfikatem. Idealny pomysł na prezent rodzinny o wyjątkowym znaczeniu.”</p>
         <div class="who">— Przykładowa opinia klienta</div>
       </div>
       <div class="testi">
-        <div class="avatar-ph">👤</div>
+        <div class="avatar-ph"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="4" fill="#7a5a1c"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7" stroke="#7a5a1c" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></div>
         <div class="stars">★★★★★</div>
         <p>„Jako kolekcjoner numizmatów doceniam jakość wykonania i rzetelny opis. Czekam na kolejne monety z serii.”</p>
         <div class="who">— Przykładowa opinia klienta</div>
@@ -528,7 +561,7 @@
   </div>
 </section>
 
-<section>
+<section class="reveal">
   <div class="wrap" style="max-width:800px;">
     <div class="section-head">
       <div class="eyebrow">Pytania i odpowiedzi</div>
@@ -557,7 +590,7 @@
   </div>
 </section>
 
-<section id="zamow">
+<section class="reveal" id="zamow">
   <div class="wrap">
     <div class="final-cta">
       <div class="eyebrow" style="color:var(--gold-light);">Oferta ograniczona czasowo</div>
@@ -569,7 +602,7 @@
   </div>
 </section>
 
-<section class="alt" id="formularz">
+<section class="alt reveal" id="formularz">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Formularz testowy</div>
@@ -654,6 +687,23 @@
     To jest szablon strony (demo) przygotowany na bazie treści produktowej. Nie zawiera aktywnej bramki płatności. © 2026 AZ Aurum. Wszelkie prawa zastrzeżone.
   </div>
 </footer>
+
+<script>
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && revealEls.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.15, rootMargin:'0px 0px -60px 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+</script>
 
 </body>
 </html>
