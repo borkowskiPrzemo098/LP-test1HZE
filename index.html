@@ -169,13 +169,16 @@
   }
   blockquote::before{content:"“"; color:var(--gold); font-size:22px; margin-right:4px; font-style:normal;}
 
-  .intro-strip{padding:28px 0;}
+  .hero-intro{
+    background:#fff; border:1px solid var(--line); border-radius:10px;
+    padding:20px 22px; margin:0 0 26px;
+  }
   .intro-lead{
-    text-align:center; max-width:760px; margin:0 auto 12px; font-size:19px; line-height:1.5;
+    text-align:center; margin:0 0 12px; font-size:16px; line-height:1.5;
     color:var(--ink); font-weight:600;
   }
   .intro-sub{
-    text-align:center; font-family:'Work Sans', sans-serif; font-size:13px; font-weight:700;
+    text-align:center; font-family:'Work Sans', sans-serif; font-size:12.5px; font-weight:700;
     letter-spacing:.4px; color:var(--gold-dark);
   }
   .price-disclaimer{
@@ -389,6 +392,7 @@
     background:var(--cream-2); border:1px solid var(--line); border-radius:8px;
     padding:14px 16px; margin:18px 0;
   }
+  .order-declaration-top{margin:0 0 24px;}
   .check-row{
     display:flex; align-items:flex-start; gap:10px; margin:18px 0;
     font-family:'Work Sans', sans-serif; font-size:12.5px; line-height:1.5; color:#4a4636; cursor:pointer;
@@ -440,6 +444,11 @@
     <div class="promo-hero-left">
       <img src="images/baner-hze-nowa-test2.png" alt="Watykan — pierwsza złota moneta Euro, kolekcja Historia Złotych Euro, cena specjalna 259 zł" style="width:100%; height:auto; margin-bottom:26px;">
 
+      <div class="hero-intro">
+        <p class="intro-lead">Jan Paweł II – Papież Polak – pierwsza złota moneta Euro wyemitowana przez Watykan upamiętniona na kolekcjonerskiej złotej monecie.</p>
+        <p class="intro-sub">✦ Oficjalna złota moneta kolekcjonerska – prawny środek płatniczy</p>
+      </div>
+
       <div class="trust-row" style="justify-content:center; color:#4a4636;">
         <div><span class="dot"></span> Certyfikat autentyczności</div>
         <div><span class="dot"></span> Złoto próby 9999</div>
@@ -450,8 +459,7 @@
 
     <div class="promo-hero-right">
       <form class="order-form order-form-compact" onsubmit="event.preventDefault(); alert('To wersja demonstracyjna szablonu — zamówienia nie są jeszcze obsługiwane.');">
-        <div class="eyebrow" style="text-align:center; display:block; margin-bottom:6px;">Formularz testowy</div>
-        <h2 style="text-align:center; font-size:22px; margin-bottom:22px;">Zamów monetę „Historia Złotych Euro”</h2>
+        <p class="order-declaration order-declaration-top">Tak, zamawiam złotą monetę, upamiętniającą pierwsze złote Euro z Janem Pawłem II, w cenie specjalnej 259 zł (zamiast 329 zł). To aż 70 zł zniżki! Rozpoczyna ona kolekcję złotych monet z unikalnej, limitowanej kolekcji „Historia Złotych Euro”. Koszty pakowania i przesyłki 14,99 zł. Mam 14 dni na zapoznanie się z przesłaną monetą.</p>
         <div class="row">
           <div>
             <label for="imie">Imię i nazwisko</label>
@@ -494,8 +502,6 @@
             </select>
           </div>
         </div>
-        <p class="order-declaration">Tak, zamawiam złotą monetę, upamiętniającą pierwsze złote Euro z Janem Pawłem II, w cenie specjalnej 259 zł (zamiast 329 zł). To aż 70 zł zniżki! Rozpoczyna ona kolekcję złotych monet z unikalnej, limitowanej kolekcji „Historia Złotych Euro”. Koszty pakowania i przesyłki 14,99 zł. Mam 14 dni na zapoznanie się z przesłaną monetą.</p>
-
         <div class="order-summary">
           <div class="line"><span>Moneta „Historia Złotych Euro”</span><span>259,00 zł</span></div>
           <div class="line"><span>Dostawa</span><span>14,99 zł</span></div>
@@ -516,13 +522,6 @@
         <p class="marketing-consent">Jeżeli przy zamówieniu podałeś swój adres e-mail, jako Klienta poinformujemy Cię e-mailem o naszych produktach podobnych do tych, które kupiłeś. Możesz to oczywiście w każdej chwili odwołać. W przypadku sprzeciwu wobec wykorzystywania przez AZ AURUM danych osobowych w celach reklamowych dla podobnych produktów lub też chęci cofnięcia udzielonej zgody, prosimy o przesłanie krótkiej wiadomości e-mailem na adres: <a href="mailto:sklep@azaurum-sklep.pl">sklep@azaurum-sklep.pl</a></p>
       </form>
     </div>
-  </div>
-</section>
-
-<section class="reveal intro-strip">
-  <div class="wrap">
-    <p class="intro-lead">Jan Paweł II – Papież Polak – pierwsza złota moneta Euro wyemitowana przez Watykan upamiętniona na kolekcjonerskiej złotej monecie.</p>
-    <p class="intro-sub">✦ Oficjalna złota moneta kolekcjonerska – prawny środek płatniczy</p>
   </div>
 </section>
 
