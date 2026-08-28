@@ -168,6 +168,20 @@
   }
   blockquote::before{content:"“"; color:var(--gold); font-size:22px; margin-right:4px; font-style:normal;}
 
+  .intro-strip{padding:0 0 48px;}
+  .intro-lead{
+    text-align:center; max-width:760px; margin:0 auto 12px; font-size:19px; line-height:1.5;
+    color:var(--ink); font-weight:600;
+  }
+  .intro-sub{
+    text-align:center; font-family:'Work Sans', sans-serif; font-size:13px; font-weight:700;
+    letter-spacing:.4px; color:var(--gold-dark);
+  }
+  .price-disclaimer{
+    font-family:'Work Sans', sans-serif; font-size:12.5px; color:#8a8570; text-align:center;
+    max-width:640px; margin:26px auto 0; font-style:italic;
+  }
+
   /* Feature cards */
   .features{display:grid; grid-template-columns:repeat(4,1fr); gap:22px;}
   @media(max-width:900px){.features{grid-template-columns:repeat(2,1fr);}}
@@ -221,6 +235,15 @@
   .guarantee h3{font-size:22px; margin-bottom:12px; color:#fff;}
   .guarantee p{max-width:600px; margin:0 auto 22px; color:#cbbd93;}
 
+  .important-notice{
+    max-width:820px; margin:0 auto; background:#fff8e6; border:1px solid #e8d9a6;
+    border-radius:12px; padding:32px 36px;
+  }
+  .important-notice-head{display:flex; align-items:center; gap:12px; margin-bottom:16px;}
+  .important-notice-head h3{font-size:20px; color:var(--ink);}
+  .important-notice p{font-size:13.5px; line-height:1.7; color:#5a4f2c; margin-bottom:12px;}
+  .important-notice p:last-child{margin-bottom:0;}
+
   /* Testimonials */
   .testi-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
   @media(max-width:850px){.testi-grid{grid-template-columns:1fr;}}
@@ -261,9 +284,27 @@
   }
 
   footer{background:var(--ink); color:#a4967a; padding:40px 0 24px; font-family:'Work Sans', sans-serif; font-size:13px;}
-  footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px;}
+  footer .footer-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:28px;}
+  footer .footer-grid > div > div{margin-bottom:4px;}
   footer a{color:#cbbd93; text-decoration:none;}
+  footer a:hover{color:var(--gold-light); text-decoration:underline;}
   footer .legal{margin-top:22px; font-size:11.5px; color:#6b6350; text-align:center; width:100%;}
+
+  .payment-row{
+    display:flex; flex-wrap:wrap; gap:10px; margin-top:30px; padding-top:26px;
+    border-top:1px solid #3a3524;
+  }
+  .payment-badge{
+    display:inline-flex; align-items:center; gap:6px;
+    background:#241f14; border:1px solid #4a3c1e; color:#cbbd93;
+    font-size:11.5px; font-weight:600; letter-spacing:.2px;
+    padding:8px 14px; border-radius:20px;
+  }
+
+  .distributor-note{
+    margin-top:26px; padding-top:22px; border-top:1px solid #3a3524;
+    font-size:11.5px; line-height:1.7; color:#7a7460;
+  }
 
   .badge-note{
     background:#fff8e6; border:1px solid var(--line); color:#6b5b21; font-family:'Work Sans', sans-serif;
@@ -341,6 +382,21 @@
   .order-summary b{color:var(--gold-dark); font-size:18px;}
   .order-form .btn{width:100%; text-align:center; border:none; cursor:pointer;}
   .order-note{font-family:'Work Sans', sans-serif; font-size:12px; color:#8a8570; text-align:center; margin-top:14px;}
+  .order-declaration{
+    font-family:'Work Sans', sans-serif; font-size:13px; line-height:1.6; color:#4a4636;
+    background:var(--cream-2); border-left:3px solid var(--gold); border-radius:0 8px 8px 0;
+    padding:14px 16px; margin:18px 0;
+  }
+  .check-row{
+    display:flex; align-items:flex-start; gap:10px; margin:18px 0;
+    font-family:'Work Sans', sans-serif; font-size:12.5px; line-height:1.5; color:#4a4636; cursor:pointer;
+  }
+  .check-row input{width:16px; height:16px; margin-top:2px; accent-color:var(--gold-dark); flex-shrink:0;}
+  .marketing-consent{
+    font-family:'Work Sans', sans-serif; font-size:11px; line-height:1.6; color:#8a8570;
+    margin-top:16px; padding-top:14px; border-top:1px solid var(--line);
+  }
+  .marketing-consent a{color:var(--gold-dark); text-decoration:underline;}
   .avatar-ph{
     width:44px;height:44px;border-radius:50%;margin-bottom:12px;
     background:linear-gradient(160deg,#e6d7ad,#c9b672);
@@ -363,7 +419,7 @@
   }
 </style>
 </head>
-<body>
+<body id="top">
 
 <div class="topbar"><svg class="tb-ic" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:-2px; margin-right:5px;"><path d="M12 2l2.5 5.5L20 8.5l-4 4 1 5.5L12 15.5 7 18l1-5.5-4-4 5.5-1L12 2z" fill="#e8c976"/></svg> Limitowana edycja — dostępnych już tylko <b>ostatnie egzemplarze</b> z pierwszej transzy | Darmowa wycena kolekcji przez telefon</div>
 
@@ -436,6 +492,8 @@
             </select>
           </div>
         </div>
+        <p class="order-declaration">Tak, zamawiam złotą monetę, upamiętniającą pierwsze złote Euro z Janem Pawłem II, w cenie specjalnej 259 zł (zamiast 329 zł). To aż 70 zł zniżki! Rozpoczyna ona kolekcję złotych monet z unikalnej, limitowanej kolekcji „Historia Złotych Euro”. Koszty pakowania i przesyłki 14,99 zł. Mam 14 dni na zapoznanie się z przesłaną monetą.</p>
+
         <div class="order-summary">
           <div class="line"><span>Moneta „Historia Złotych Euro”</span><span>259,00 zł</span></div>
           <div class="line"><span>Dostawa</span><span>14,99 zł</span></div>
@@ -444,10 +502,25 @@
           <div class="line"><span>Ubezpieczenie przesyłki</span><span class="free">Gratis</span></div>
           <div class="total"><span>Razem do zapłaty</span><b>273,99 zł</b></div>
         </div>
+
+        <label class="check-row">
+          <input type="checkbox" required>
+          <span>Tak, zgadzam się z Ogólnymi Warunkami i zapoznałem się z Polityką prywatności AZ AURUM.</span>
+        </label>
+
         <button type="submit" class="btn">Wyślij zamówienie</button>
         <div class="order-note">To formularz demonstracyjny — zamówienia nie są rejestrowane ani przekazywane do realizacji.</div>
+
+        <p class="marketing-consent">Jeżeli przy zamówieniu podałeś swój adres e-mail, jako Klienta poinformujemy Cię e-mailem o naszych produktach podobnych do tych, które kupiłeś. Możesz to oczywiście w każdej chwili odwołać. W przypadku sprzeciwu wobec wykorzystywania przez AZ AURUM danych osobowych w celach reklamowych dla podobnych produktów lub też chęci cofnięcia udzielonej zgody, prosimy o przesłanie krótkiej wiadomości e-mailem na adres: <a href="mailto:sklep@azaurum-sklep.pl">sklep@azaurum-sklep.pl</a></p>
       </form>
     </div>
+  </div>
+</section>
+
+<section class="reveal intro-strip">
+  <div class="wrap">
+    <p class="intro-lead">Jan Paweł II – Papież Polak – pierwsza złota moneta Euro wyemitowana przez Watykan upamiętniona na kolekcjonerskiej złotej monecie.</p>
+    <p class="intro-sub">✦ Oficjalna złota moneta kolekcjonerska – prawny środek płatniczy</p>
   </div>
 </section>
 
@@ -455,19 +528,19 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">O monecie</div>
-      <h2>Moneta, która łączy wiarę, historię i wartość inwestycyjną</h2>
-      <p>W 2002 roku Watykan jako jeden z pierwszych krajów wprowadził do obiegu złote monety Euro. Na awersie umieszczono podobiznę Ojca Świętego Jana Pawła II, a na rewersie — symboliczne przedstawienie Arki Noego, nawiązujące do biblijnej opowieści o nadziei i nowym początku.</p>
+      <h2>Jan Paweł II utrwalony na pierwszym złotym Euro Watykanu (2002)</h2>
+      <p>Pierwsza złota moneta o nominale w Euro wyemitowana przez Watykan w 2002 roku przedstawia wizerunek Papieża Polaka – Jana Pawła II. Na jej rewersie widnieje symboliczna scena z Biblii – Noe wprowadzający zwierzęta na pokład Arki.</p>
     </div>
 
     <div class="story-grid">
       <div class="ph"><img src="images/o-monecie.jpg" alt="Zbliżenie monety — Jan Paweł II, Watykan 2002" style="object-position:center;"></div>
       <div>
         <h3>Symbol wiary w Twojej kolekcji</h3>
-        <p>To nie jest zwykła pamiątka. To autentyczna, prawnie obowiązująca moneta o wymiarach zaledwie 15,2 × 8,6 mm i wadze 1/200 uncji, wybita w czystym złocie próby 9999 przez prestiżową mennicę niemiecką — z zachowaniem najwyższych standardów menniczych.</p>
-        <blockquote>„Każdy egzemplarz kolekcji trafia do Ciebie w eleganckiej szkatule kolekcjonerskiej wraz z certyfikatem autentyczności — gotowy do ekspozycji lub przekazania w rodzinie.”</blockquote>
-        <p>Dzięki niewielkim nakładom emisyjnym moneta stanowi rzadkość poszukiwaną przez kolekcjonerów numizmatyki papieskiej i miłośników historii Watykanu na całym świecie.</p>
+        <p>Watykan, mimo że formalnie nie jest członkiem Unii Europejskiej, należy do strefy euro od początku jej powstania. Na mocy specjalnego porozumienia może emitować ograniczoną liczbę monet Euro. Ze względu na bardzo niską limitację są one zawsze szczególnie poszukiwane przez kolekcjonerów na całym świecie.</p>
+        <blockquote>„Teraz pierwsza złota moneta Euro z Watykanu została uwieczniona na nowej, niezwykłej emisji 2024.”</blockquote>
       </div>
     </div>
+    <p class="price-disclaimer">Ze względu na nieustannie rosnące ceny złota, AZ Aurum zastrzega sobie możliwość zmiany cen kolejnych monet w kolekcji.</p>
   </div>
 </section>
 
@@ -505,9 +578,10 @@
 <section class="reveal">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Kolekcja</div>
-      <h2>„Historia Złotych Euro” — podróż po mennicach Europy</h2>
-      <p>W skład kolekcji wchodzą złote monety emitowane przez pierwsze kraje strefy euro. Co miesiąc, w Twoim tempie, kolekcja rozrasta się o kolejny, starannie wyselekcjonowany egzemplarz.</p>
+      <div class="eyebrow">O kolekcji</div>
+      <h2>Unikalna, limitowana złota kolekcja „Historia Złotych Euro”</h2>
+      <p>Rozpoczyna ona kolekcję numizmatyczną „Historia Złotych Euro”, która upamiętnia złote monety Euro wyemitowane przez kraje należące do obszaru euro.</p>
+      <p>W skład kolekcji wchodzą złote monety dedykowane historycznym, pierwszym złotym Euro między innymi z krajów takich jak: Austria, Belgia, Finlandia, Francja, Hiszpania, Holandia, Monako, Niemcy, Malta, Słowacja, Litwa czy Watykan.</p>
     </div>
     <div class="coin-gallery">
       <figure>
@@ -531,6 +605,19 @@
   </div>
 </section>
 
+<section class="reveal">
+  <div class="wrap">
+    <div class="story-grid story-grid-rev">
+      <div>
+        <div class="eyebrow">Gratisy w komplecie</div>
+        <h3 style="font-size:23px; margin:10px 0 14px;">Cenne akcesoria kolekcjonerskie</h3>
+        <p>Kolekcję wzbogaca specjalnie zaprojektowana szkatuła kolekcjonerska służąca do bezpiecznego przechowywania i prezentacji wartościowego zbioru. Do kolekcji dołączany jest certyfikat autentyczności.</p>
+      </div>
+      <div class="ph"><img src="images/baner-hze-nowa-test2.png" alt="Szkatuła kolekcjonerska i certyfikat autentyczności AZ Aurum" style="object-position:center 80%;"></div>
+    </div>
+  </div>
+</section>
+
 <section class="alt reveal" id="specyfikacja">
   <div class="wrap">
     <div class="section-head">
@@ -547,6 +634,19 @@
       <tr><td>Nakład</td><td>7 500 zestawów kolekcji na świecie</td></tr>
       <tr><td>W zestawie</td><td>Moneta, szkatuła kolekcjonerska, certyfikat autentyczności</td></tr>
     </table>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="wrap">
+    <div class="important-notice">
+      <div class="important-notice-head">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9.5" stroke="#8a6321" stroke-width="1.6"/><rect x="11.1" y="6.5" width="1.8" height="7" rx="0.9" fill="#8a6321"/><rect x="11.1" y="15.2" width="1.8" height="1.8" rx="0.9" fill="#8a6321"/></svg>
+        <h3>Ważna informacja!</h3>
+      </div>
+      <p>AZ Aurum jest wyłącznym dystrybutorem na Polskę oryginalnych złotych monet z kolekcji „Historia Złotych Euro”. AZ Aurum gwarantuje zarówno najwyższą jakość oferowanych numizmatów, jak i najwyższy standard obsługi.</p>
+      <p>Kupując złotą monetę „Watykan 2002 – Jan Paweł II” w cenie specjalnej 259 zł, jednocześnie rozpoczynam kolekcjonowanie złotych monet z limitowanej kolekcji „Historia Złotych Euro”. Kolejne złote monety otrzymam w miesięcznych odstępach, każdą w cenie 329 zł. Koszt pakowania i wysyłki każdej monety to 14,99 zł. Płatności za kolejne monety dokonam na podstawie rachunku dołączonego do przesyłki. Zbieranie kolekcji mogę przerwać lub zawiesić w dowolnym momencie – wystarczy poinformować o tym AZ Aurum w dogodny sposób (e-mailem lub telefonicznie). Mam 14 dni na zapoznanie się z kolejnymi złotymi monetami i przysługuje mi prawo do zwrotu monety. Koszty przesyłki zwrotnej pokrywa zamawiający.</p>
+    </div>
   </div>
 </section>
 
@@ -637,19 +737,40 @@
 </div>
 
 <footer>
-  <div class="wrap">
+  <div class="wrap footer-grid">
     <div>
       <img src="images/logoAZ-gr.png" alt="AZ Aurum — Numizmatyka Adam Zieliński" style="width:170px; height:auto; background:#fff; border-radius:8px; padding:10px; margin-bottom:14px;">
+      <div>Biuro Obsługi Klienta</div>
       <div>Tel: 784 622 333 (pon–pt, 9:00–17:00)</div>
       <div>Email: sklep@azaurum-sklep.pl</div>
     </div>
     <div>
-      <div style="color:#f4ecd8; font-weight:700; margin-bottom:8px;">Informacje</div>
-      <div><a href="#specyfikacja">Specyfikacja produktu</a></div>
-      <div><a href="#zamow">Regulamin sklepu</a></div>
+      <div style="color:#f4ecd8; font-weight:700; margin-bottom:8px;">Nawigacja</div>
+      <div><a href="#top">AZ AURUM</a></div>
+      <div><a href="#zamow">Ogólne Warunki</a></div>
+      <div><a href="#formularz">Kontakt</a></div>
       <div><a href="#zamow">Polityka prywatności</a></div>
+      <div><a href="#zamow">Zwroty</a></div>
+    </div>
+    <div>
+      <div style="color:#f4ecd8; font-weight:700; margin-bottom:8px;">Dostawa</div>
+      <div style="max-width:240px;">Koszty pakowania i wysyłki to 14,99 zł. Zamówienie zostanie dostarczone do domu pod wskazany adres.</div>
     </div>
   </div>
+
+  <div class="wrap payment-row">
+    <div class="payment-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="10.5" width="14" height="9.5" rx="1.6" stroke="#e8c976" stroke-width="1.5"/><path d="M8 10.5V8a4 4 0 018 0v2.5" stroke="#e8c976" stroke-width="1.5"/></svg>Bezpieczne połączenie SSL</div>
+    <div class="payment-badge">Szybki przelew</div>
+    <div class="payment-badge">BLIK</div>
+    <div class="payment-badge">Visa · Mastercard</div>
+    <div class="payment-badge">Apple Pay · Google Pay</div>
+    <div class="payment-badge">Płatność za pobraniem</div>
+  </div>
+
+  <div class="wrap">
+    <div class="distributor-note">Oficjalny przedstawiciel i dystrybutor tak znanych mennic i emitentów, jak: Francuska Mennica Państwowa, Kanadyjska Mennica Królewska, Australijska Mennica Królewska, Australijska Mennica Perth, Mennica Ziemi Świętej, Hiszpańska Mennica Królewska, NZ Post – Bank Centralny Nowej Zelandii, Kompania Wschodnioindyjska (The East India Company), MDM Mennica Niemiecka, Mennica Litewska, Ai Mint, The Commonwealth Mint, The Tower Mint, Brytyjska Mennica Królewska.</div>
+  </div>
+
   <div class="legal wrap">
     To jest szablon strony (demo) przygotowany na bazie treści produktowej. Nie zawiera aktywnej bramki płatności. © 2026 AZ Aurum. Wszelkie prawa zastrzeżone.
   </div>
