@@ -365,13 +365,8 @@
     background:#fff; border:1px solid var(--line); border-radius:14px; padding:38px; max-width:640px; margin:0 auto;
   }
   .order-form .row{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;}
-  @media(max-width:560px){.order-form .row{grid-template-columns:1fr;}}
-  .gender-row{display:flex; gap:22px; margin-bottom:18px;}
-  .gender-option{
-    display:flex; align-items:center; gap:7px; cursor:pointer;
-    font-family:'Work Sans', sans-serif; font-size:13.5px; font-weight:600; color:#4a4636;
-  }
-  .gender-option input{width:16px; height:16px; accent-color:var(--gold-dark); margin:0;}
+  .order-form .row-3{grid-template-columns:1.3fr 1fr 1fr;}
+  @media(max-width:560px){.order-form .row, .order-form .row-3{grid-template-columns:1fr;}}
   .order-form label{
     display:block; font-family:'Work Sans', sans-serif; font-size:12.5px; font-weight:700; color:#4a4636; margin-bottom:6px;
   }
@@ -468,50 +463,58 @@
     <div class="promo-hero-right">
       <form class="order-form order-form-compact" onsubmit="event.preventDefault(); alert('To wersja demonstracyjna szablonu — zamówienia nie są jeszcze obsługiwane.');">
         <p class="order-declaration order-declaration-top"><strong>Tak, zamawiam złotą monetę, upamiętniającą pierwsze złote Euro z Janem Pawłem II, w cenie specjalnej 259 zł (zamiast 329 zł). To aż 70 zł zniżki!</strong> Rozpoczyna ona kolekcję złotych monet z unikalnej, limitowanej kolekcji „Historia Złotych Euro”. Koszty pakowania i przesyłki 14,99 zł. Mam 14 dni na zapoznanie się z przesłaną monetą.</p>
-        <div class="gender-row">
-          <label class="gender-option"><input type="radio" name="plec" value="Pan" checked><span>Pan</span></label>
-          <label class="gender-option"><input type="radio" name="plec" value="Pani"><span>Pani</span></label>
-        </div>
-        <div class="row">
-          <div>
-            <label for="imie">Imię i nazwisko</label>
-            <input id="imie" type="text" placeholder="Jan Kowalski" required>
-          </div>
-          <div>
-            <label for="tel">Telefon</label>
-            <input id="tel" type="tel" placeholder="+48 600 000 000" required>
-          </div>
-        </div>
         <div class="row">
           <div class="full">
-            <label for="email">Adres e-mail</label>
-            <input id="email" type="email" placeholder="jan.kowalski@przyklad.pl" required>
-          </div>
-        </div>
-        <div class="row">
-          <div class="full">
-            <label for="adres">Adres dostawy</label>
-            <input id="adres" type="text" placeholder="Ulica, numer domu/mieszkania">
-          </div>
-        </div>
-        <div class="row">
-          <div>
-            <label for="miasto">Miasto</label>
-            <input id="miasto" type="text" placeholder="Warszawa">
-          </div>
-          <div>
-            <label for="kod">Kod pocztowy</label>
-            <input id="kod" type="text" placeholder="00-000">
-          </div>
-        </div>
-        <div class="row">
-          <div class="full">
-            <label for="ilosc">Liczba egzemplarzy</label>
-            <select id="ilosc">
-              <option>1 moneta — 259 zł</option>
-              <option>2 monety — 518 zł</option>
-              <option>3 monety — 777 zł</option>
+            <label for="plec">Wybierz płeć *</label>
+            <select id="plec" required>
+              <option value="" disabled selected>Wybierz płeć *</option>
+              <option value="M">Pan</option>
+              <option value="F">Pani</option>
             </select>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="imie">Imię *</label>
+            <input id="imie" type="text" placeholder="Imię *" required>
+          </div>
+          <div>
+            <label for="nazwisko">Nazwisko *</label>
+            <input id="nazwisko" type="text" placeholder="Nazwisko *" required>
+          </div>
+        </div>
+        <div class="row row-3">
+          <div>
+            <label for="ulica">Ulica *</label>
+            <input id="ulica" type="text" placeholder="Ulica *" required>
+          </div>
+          <div>
+            <label for="nrdomu">Nr domu *</label>
+            <input id="nrdomu" type="text" placeholder="Nr domu *" required>
+          </div>
+          <div>
+            <label for="nrmieszkania">Nr mieszkania</label>
+            <input id="nrmieszkania" type="text" placeholder="Nr mieszkania">
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="kod">Kod pocztowy *</label>
+            <input id="kod" type="text" placeholder="Kod pocztowy *" required>
+          </div>
+          <div>
+            <label for="miasto">Miejscowość *</label>
+            <input id="miasto" type="text" placeholder="Miejscowość *" required>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="email">E-mail *</label>
+            <input id="email" type="email" placeholder="E-mail *" required>
+          </div>
+          <div>
+            <label for="tel">Nr telefonu *</label>
+            <input id="tel" type="tel" placeholder="Nr telefonu *" required>
           </div>
         </div>
         <div class="order-summary">
@@ -528,7 +531,7 @@
           <span>Tak, zgadzam się z Ogólnymi Warunkami i zapoznałem się z Polityką prywatności AZ AURUM.</span>
         </label>
 
-        <button type="submit" class="btn">Wyślij zamówienie</button>
+        <button type="submit" class="btn">Tak, zamawiam</button>
         <div class="order-note">To formularz demonstracyjny — zamówienia nie są rejestrowane ani przekazywane do realizacji.</div>
 
         <p class="marketing-consent">Jeżeli przy zamówieniu podałeś swój adres e-mail, jako Klienta poinformujemy Cię e-mailem o naszych produktach podobnych do tych, które kupiłeś. Możesz to oczywiście w każdej chwili odwołać. W przypadku sprzeciwu wobec wykorzystywania przez AZ AURUM danych osobowych w celach reklamowych dla podobnych produktów lub też chęci cofnięcia udzielonej zgody, prosimy o przesłanie krótkiej wiadomości e-mailem na adres: <a href="mailto:sklep@azaurum-sklep.pl">sklep@azaurum-sklep.pl</a></p>
