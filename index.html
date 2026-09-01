@@ -367,8 +367,9 @@
   .order-form .row{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;}
   .order-form .row-3{grid-template-columns:1.3fr 1fr 1fr;}
   @media(max-width:560px){.order-form .row, .order-form .row-3{grid-template-columns:1fr;}}
-  .order-form label{
-    display:block; font-family:'Work Sans', sans-serif; font-size:12.5px; font-weight:700; color:#4a4636; margin-bottom:6px;
+  .sr-only{
+    position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
   }
   .order-form input, .order-form select, .order-form textarea{
     width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:8px;
@@ -465,7 +466,7 @@
         <p class="order-declaration order-declaration-top"><strong>Tak, zamawiam złotą monetę, upamiętniającą pierwsze złote Euro z Janem Pawłem II, w cenie specjalnej 259 zł (zamiast 329 zł). To aż 70 zł zniżki!</strong> Rozpoczyna ona kolekcję złotych monet z unikalnej, limitowanej kolekcji „Historia Złotych Euro”. Koszty pakowania i przesyłki 14,99 zł. Mam 14 dni na zapoznanie się z przesłaną monetą.</p>
         <div class="row">
           <div class="full">
-            <label for="plec">Wybierz płeć *</label>
+            <label for="plec" class="sr-only">Wybierz płeć *</label>
             <select id="plec" required>
               <option value="" disabled selected>Wybierz płeć *</option>
               <option value="M">Pan</option>
@@ -475,45 +476,45 @@
         </div>
         <div class="row">
           <div>
-            <label for="imie">Imię *</label>
+            <label for="imie" class="sr-only">Imię *</label>
             <input id="imie" type="text" placeholder="Imię *" required>
           </div>
           <div>
-            <label for="nazwisko">Nazwisko *</label>
+            <label for="nazwisko" class="sr-only">Nazwisko *</label>
             <input id="nazwisko" type="text" placeholder="Nazwisko *" required>
           </div>
         </div>
         <div class="row row-3">
           <div>
-            <label for="ulica">Ulica *</label>
+            <label for="ulica" class="sr-only">Ulica *</label>
             <input id="ulica" type="text" placeholder="Ulica *" required>
           </div>
           <div>
-            <label for="nrdomu">Nr domu *</label>
+            <label for="nrdomu" class="sr-only">Nr domu *</label>
             <input id="nrdomu" type="text" placeholder="Nr domu *" required>
           </div>
           <div>
-            <label for="nrmieszkania">Nr mieszkania</label>
+            <label for="nrmieszkania" class="sr-only">Nr mieszkania</label>
             <input id="nrmieszkania" type="text" placeholder="Nr mieszkania">
           </div>
         </div>
         <div class="row">
           <div>
-            <label for="kod">Kod pocztowy *</label>
+            <label for="kod" class="sr-only">Kod pocztowy *</label>
             <input id="kod" type="text" placeholder="Kod pocztowy *" required>
           </div>
           <div>
-            <label for="miasto">Miejscowość *</label>
+            <label for="miasto" class="sr-only">Miejscowość *</label>
             <input id="miasto" type="text" placeholder="Miejscowość *" required>
           </div>
         </div>
         <div class="row">
           <div>
-            <label for="email">E-mail *</label>
+            <label for="email" class="sr-only">E-mail *</label>
             <input id="email" type="email" placeholder="E-mail *" required>
           </div>
           <div>
-            <label for="tel">Nr telefonu *</label>
+            <label for="tel" class="sr-only">Nr telefonu *</label>
             <input id="tel" type="tel" placeholder="Nr telefonu *" required>
           </div>
         </div>
