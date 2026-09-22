@@ -318,21 +318,14 @@
     margin-top:34px; padding-top:26px; border-top:1px solid #3a3524;
   }
 
-  .payment-row{
-    display:flex; flex-wrap:wrap; gap:10px; margin-top:30px; padding-top:26px;
-    border-top:1px solid #3a3524;
-  }
-  .payment-badge{
-    display:inline-flex; align-items:center; gap:6px;
-    background:#241f14; border:1px solid #4a3c1e; color:#cbbd93;
-    font-size:11.5px; font-weight:600; letter-spacing:.2px;
-    padding:8px 14px; border-radius:20px;
-  }
 
   .distributor-note{
     margin-top:26px; padding-top:22px; border-top:1px solid #3a3524;
     font-size:11.5px; line-height:1.7; color:#7a7460;
   }
+  .distributor-note-centered{text-align:center;}
+  .distributor-note-centered p{margin-bottom:10px;}
+  .distributor-note-centered p:last-child{margin-bottom:0;}
 
   .badge-note{
     background:#fff8e6; border:1px solid var(--line); color:#6b5b21; font-family:'Work Sans', sans-serif;
@@ -831,15 +824,11 @@
     </div>
   </div>
 
-  <div class="wrap payment-row">
-    <div class="payment-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="10.5" width="14" height="9.5" rx="1.6" stroke="#e8c976" stroke-width="1.5"/><path d="M8 10.5V8a4 4 0 018 0v2.5" stroke="#e8c976" stroke-width="1.5"/></svg>Bezpieczne połączenie SSL</div>
-    <div class="payment-badge">BLIK</div>
-    <div class="payment-badge">Visa · Mastercard</div>
-    <div class="payment-badge">Apple Pay · Google Pay</div>
-  </div>
-
   <div class="wrap">
-    <div class="distributor-note">Oficjalny przedstawiciel i dystrybutor tak znanych mennic i emitentów, jak: Francuska Mennica Państwowa, Kanadyjska Mennica Królewska, Australijska Mennica Królewska, Australijska Mennica Perth, Mennica Ziemi Świętej, Hiszpańska Mennica Królewska, NZ Post – Bank Centralny Nowej Zelandii, Kompania Wschodnioindyjska (The East India Company), MDM Mennica Niemiecka, Mennica Litewska, Ai Mint, The Commonwealth Mint, The Tower Mint, Brytyjska Mennica Królewska.</div>
+    <div class="distributor-note distributor-note-centered">
+      <p>Oficjalny przedstawiciel i dystrybutor tak znanych mennic i emitentów, jak:</p>
+      <p>Francuska Mennica Państwowa, Kanadyjska Mennica Królewska, Australijska Mennica Królewska, Australijska Mennica Perth, Mennica Ziemi Świętej, Hiszpańska Mennica Królewska, NZ Post – Bank Centralny Nowej Zelandii, Kompania Wschodnioindyjska (The East India Company), MDM Mennica Niemiecka, Mennica Litewska, Ai Mint, The Commonwealth Mint, The Tower Mint, Brytyjska Mennica Królewska.</p>
+    </div>
   </div>
 
   <div class="legal wrap">
