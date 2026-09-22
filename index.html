@@ -216,23 +216,9 @@
   .coin-gallery{
     display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:36px;
   }
-  @media(max-width:850px){ .coin-gallery{ grid-template-columns:repeat(2,1fr); } }
-  .coin-gallery figure{
-    margin:0; border-radius:10px; overflow:hidden; border:1px solid var(--line);
-    box-shadow:0 10px 22px rgba(0,0,0,.10); background:#000;
-  }
-  .coin-gallery .bar-photo{
-    width:100%; aspect-ratio:1/1;
-    background-image:url("images/kolekcja.jpg");
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-position:center;
-    transition:transform .4s ease;
-  }
-  .coin-gallery figure:hover .bar-photo{ transform:scale(1.1); }
-  .coin-gallery figcaption{
-    font-family:'Work Sans', sans-serif; font-size:12px; font-weight:700; letter-spacing:.3px;
-    text-align:center; padding:10px 8px; background:#fff; color:#4a4636;
+  @media(max-width:640px){ .coin-gallery{ grid-template-columns:repeat(2,1fr); } }
+  .coin-gallery img{
+    width:100%; height:auto; display:block;
   }
 
   /* Specs table */
@@ -461,7 +447,7 @@
 <section class="promo-banner" id="formularz">
   <div class="wrap promo-hero-grid">
     <div class="promo-hero-left">
-      <img src="images/baner-hze-nowa-test2.png" alt="Watykan — pierwsza złota moneta Euro, kolekcja Historia Złotych Euro, cena specjalna 259 zł" style="width:100%; height:auto; margin-bottom:26px;">
+      <img src="images/baner-hze-nowa-test3.png" alt="Watykan — pierwsza złota moneta Euro, kolekcja Historia Złotych Euro, cena specjalna 259 zł" style="width:100%; height:auto; margin-bottom:26px;">
 
       <div class="hero-intro">
         <p class="intro-lead">Jan Paweł II – Papież Polak – pierwsza złota moneta Euro wyemitowana przez Watykan upamiętniona na kolekcjonerskiej złotej monecie.</p>
@@ -615,20 +601,16 @@
     </div>
     <div class="coin-gallery">
       <figure>
-        <div class="bar-photo"></div>
-        <figcaption>Holandia</figcaption>
+        <img src="images/hze-kolekcja1.png" alt="Złota moneta First Gold-Euro — Malta 2008">
       </figure>
       <figure>
-        <div class="bar-photo"></div>
-        <figcaption>Hiszpania</figcaption>
+        <img src="images/hze-kolekcja2.png" alt="Złota moneta First Gold-Euro — Finlandia 2002">
       </figure>
       <figure>
-        <div class="bar-photo"></div>
-        <figcaption>Włochy</figcaption>
+        <img src="images/hze-kolekcja3.png" alt="Złota moneta First Gold-Euro — Niemcy 2002">
       </figure>
       <figure>
-        <div class="bar-photo"></div>
-        <figcaption>Niemcy</figcaption>
+        <img src="images/hze-kolekcja4.png" alt="Złota moneta First Gold-Euro — Austria 2002">
       </figure>
     </div>
   </div>
